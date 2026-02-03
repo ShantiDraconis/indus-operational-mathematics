@@ -75,6 +75,17 @@ symbol_network.json
 venv/
 ENV/
 env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 MANIFEST
 .pytest_cache/
 .coverage
