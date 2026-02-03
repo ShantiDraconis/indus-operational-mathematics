@@ -1,0 +1,9 @@
+setup.py
+indus_analysis/__init__.py
+indus_analysis/statistical_analysis.py
+indus_analysis/tensor_models.py
+indus_analysis.egg-info/PKG-INFO
+indus_analysis.egg-info/SOURCES.txt
+indus_analysis.egg-info/dependency_links.txt
+indus_analysis.egg-info/requires.txt
+indus_analysis.egg-info/top_level.txt
