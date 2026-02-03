@@ -1,0 +1,85 @@
+name: Formal Verification
+
+on:
+  push:
+    branches: [ main, copilot/** ]
+    paths:
+      - 'formal/**'
+      - 'model/**'
+      - '.github/workflows/formal-verification.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'formal/**'
+      - 'model/**'
+  workflow_dispatch:
+
+jobs:
+  lean4:
+    name: Verify Lean 4 Proofs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Install Lean 4
+        uses: leanprover/lean-action@v1
+        with:
+          use-elan: true
+          
+      - name: Build Lean project
+        working-directory: formal/lean
+        run: |
+          lake build
+          
+  coq:
+    name: Verify Coq Proofs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Coq
+        uses: coq-community/docker-coq-action@v1
+        with:
+          coq_version: '8.18'
+          
+      - name: Build Coq project
+        working-directory: formal/coq
+        run: |
+          make all
+          
+  isabelle:
+    name: Verify Isabelle Proofs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Isabelle
+        run: |
+          wget https://isabelle.in.tum.de/dist/Isabelle2023_linux.tar.gz
+          tar xzf Isabelle2023_linux.tar.gz
+          echo "$PWD/Isabelle2023/bin" >> $GITHUB_PATH
+          
+      - name: Build Isabelle theories
+        working-directory: formal/isabelle
+        run: |
+          isabelle build -D .
+          
+  agda:
+    name: Verify Agda Proofs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Agda
+        uses: wenkokke/setup-agda@v2
+        with:
+          agda-version: '2.6.4'
+          
+      - name: Build Agda project
+        working-directory: formal/agda
+        run: |
+          agda --safe IndusOperationalMathematics.agda

@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{book}
+
+% Load preamble with all packages and custom commands
+\input{preamble}
+
+% Document metadata
+\title{Indus Operational Mathematics:\\
+       A Formal Framework for State-Based Symbol Systems}
+\author{Draconis}
+\date{2026}
+
+\begin{document}
+
+% ============================================================================
+% Front Matter
+% ============================================================================
+
+\frontmatter
+
+\input{frontmatter/title}
+\input{frontmatter/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{frontmatter/notation}
+\input{frontmatter/acknowledgements}
+
+% ============================================================================
+% Main Content
+% ============================================================================
+
+\mainmatter
+
+\input{chapters/01_introduction}
+\input{chapters/02_methodology}
+\input{chapters/03_inventory_and_families}
+\input{chapters/04_operators_and_composition}
+\input{chapters/05_frequency_position_bigrams}
+\input{chapters/06_automaton_and_state_time}
+\input{chapters/07_mathematical_scope}
+\input{chapters/08_comparative_systems}
+\input{chapters/09_modern_equivalents}
+\input{chapters/10_theorem_tcop}
+\input{chapters/11_conclusion}
+
+% ============================================================================
+% Back Matter
+% ============================================================================
+
+\backmatter
+
+\appendix
+\input{appendices/A_tables_summary}
+\input{appendices/B_operator_catalog}
+\input{appendices/C_reproducibility}
+\input{appendices/D_limits_and_nonclaims}
+
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
