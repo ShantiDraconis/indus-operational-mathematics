@@ -20,3 +20,21 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+### LaTeX ###
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.synctex.gz
