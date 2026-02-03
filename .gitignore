@@ -45,6 +45,12 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.log
 
 ### Project specific ###
 output/*.png
