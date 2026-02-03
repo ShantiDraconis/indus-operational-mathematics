@@ -22,6 +22,13 @@ rad.json
 TestResults.xml
 
 ### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -48,6 +55,13 @@ wheels/
 
 ### Generated outputs ###
 symbol_network.json
+# PyTest
+.pytest_cache/
+
+# Virtual environments
+venv/
+ENV/
+env/
 MANIFEST
 .pytest_cache/
 .coverage
