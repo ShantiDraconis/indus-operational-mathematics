@@ -1,0 +1,77 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This monograph presents a formal mathematical framework for analyzing the Indus Valley (Harappan) script through the paradigm of \textbf{operational mathematics} and \textbf{state-based computation}. Rather than approaching ancient symbols as fixed phonetic or semantic units, we model them as \textbf{state operators} that transform computational contexts through formal compositional rules.
+
+\section*{Core Contribution}
+
+We develop an axiomatic system consisting of five axioms (A1--A5) that govern symbol composition and state transformation:
+
+\begin{itemize}
+    \item \textbf{A1 (Class Primacy)}: Symbols belong to disjoint semantic classes defined by operational behavior
+    \item \textbf{A2 (No New Classes)}: Composition preserves class membership
+    \item \textbf{A3 (Restricted Composition)}: Only compatible classes can compose
+    \item \textbf{A4 (Terminal Closure)}: Terminal symbols enforce sequence boundaries
+    \item \textbf{A5 (Hierarchical Superposition)}: Modifiers apply in well-defined layers
+\end{itemize}
+
+From these axioms, we prove the \textbf{\TCOP{} theorem} (Total Closure of Operations Principle): Every valid symbol sequence represents a well-defined state transformation, and compositions are closed under the system's rules.
+
+\section*{Comparative Analysis}
+
+We establish deep structural parallels with ancient Chinese character transformations, particularly the radical \ren{} (\textit{rén}, ``person'') and its systematic modifications. This comparison provides empirical validation from a documented operational system.
+
+\section*{Formal Verification}
+
+The framework has been formally verified in four independent proof assistants:
+\begin{itemize}
+    \item Lean 4
+    \item Coq
+    \item Isabelle/HOL
+    \item Agda
+\end{itemize}
+
+All axioms and the \TCOP{} theorem have been machine-checked for logical consistency.
+
+\section*{Implementation}
+
+We provide:
+\begin{itemize}
+    \item Complete Python implementation for computational analysis
+    \item C++ implementation for performance-critical applications
+    \item Reproducible data processing pipeline
+    \item Statistical analysis of the first 44 Harappan symbols
+\end{itemize}
+
+\section*{Explicit Non-Claims}
+
+This work \textbf{does NOT}:
+\begin{itemize}
+    \item Claim to decipher the Indus script phonetically
+    \item Provide word-by-word translations of inscriptions
+    \item Establish historical meanings of specific symbols
+    \item Propose phonetic values for any signs
+    \item Claim to ``solve'' or ``crack'' the Indus script
+\end{itemize}
+
+\section*{Epistemological Stance}
+
+We study the \textbf{mathematics of symbol composition}, not historical linguistics. Our claims concern \textbf{operational structure}, not \textbf{semantic content}. The framework is agnostic about phonetic values, linguistic affiliations, and historical functions of the script.
+
+\section*{Significance}
+
+This work demonstrates that:
+\begin{enumerate}
+    \item Ancient symbol systems can be rigorously analyzed using formal methods
+    \item State-based operational semantics provides a general framework beyond specific scripts
+    \item Structural validation is possible without phonetic decipherment
+    \item Cross-cultural comparison reveals deep operational patterns
+\end{enumerate}
+
+\section*{Keywords}
+
+Indus Valley Script, Harappan Script, Operational Semantics, State-Based Computation, Formal Methods, Ancient Chinese Characters, Comparative Paleography, Proof Assistants, Symbol Systems, Non-Phonetic Analysis
+
+\vfill
+
+\noindent\textbf{Citation:} Draconis (2026). \textit{Indus Operational Mathematics: A Formal Framework for State-Based Symbol Systems}. \url{https://github.com/ShantiDraconis/indus-operational-mathematics}

@@ -1,0 +1,173 @@
+\chapter{Introduction}
+
+\section{Motivation}
+
+The Indus Valley (Harappan) script, dating to approximately 2600--1900 BCE, remains one of the most enigmatic writing systems in human history. Despite decades of scholarly effort, no consensus has emerged regarding its decipherment, linguistic affiliation, or even whether it constitutes ``writing'' in the conventional sense.
+
+This monograph takes a fundamentally different approach. Rather than attempting phonetic decipherment or linguistic translation, we develop a \textbf{formal mathematical framework} for analyzing how symbols \textbf{compose} and \textbf{transform states}. Our central thesis is:
+
+\begin{quote}
+\textit{Ancient symbols may function as \textbf{operators} on \textbf{states}, not merely as phonetic or semantic labels. Their compositional behavior—how they combine and transform—can be studied rigorously through formal methods, independently of phonetic values.}
+\end{quote}
+
+\section{The Paradigm Shift: From Semantics to Operations}
+
+Traditional decipherment approaches typically follow this paradigm:
+
+\begin{enumerate}
+    \item Identify symbol-sound correspondences (phonetic values)
+    \item Build a lexicon (word meanings)
+    \item Establish grammar rules
+    \item Translate inscriptions
+\end{enumerate}
+
+This works well for systems where:
+\begin{itemize}
+    \item Bilingual texts exist (Rosetta Stone for Egyptian)
+    \item The underlying language is known (Linear B for Greek)
+    \item Phonetic patterns are clear
+\end{itemize}
+
+For the Indus script, we lack all these advantages.
+
+\subsection{Operational Semantics: An Alternative}
+
+Our approach adopts \textbf{operational semantics} from computer science and formal mathematics:
+
+\begin{enumerate}
+    \item Model symbols as \textbf{operators} on abstract \textbf{states}
+    \item Define \textbf{composition rules} based on observed patterns
+    \item Formalize constraints as \textbf{axioms}
+    \item Prove theorems about \textbf{system behavior}
+    \item Validate through \textbf{formal verification}
+\end{enumerate}
+
+This paradigm has several advantages:
+
+\begin{itemize}
+    \item \textbf{No phonetic assumptions required}: We analyze structure, not sounds
+    \item \textbf{Rigorous and falsifiable}: Mathematical claims can be proven or disproven
+    \item \textbf{Reproducible}: All analysis is computational and can be independently verified
+    \item \textbf{Cross-culturally applicable}: Framework works for any symbol system
+\end{itemize}
+
+\section{Precedent: Ancient Chinese as Validation}
+
+To validate our approach, we compare with \textbf{ancient Chinese oracle bone script} (甲骨文, \textit{jiǎgǔwén}), circa 1200 BCE. This system is:
+
+\begin{itemize}
+    \item \textbf{Well-documented}: We know it worked
+    \item \textbf{Highly compositional}: Characters transform systematically
+    \item \textbf{Non-alphabetic}: Not phonetic spelling
+\end{itemize}
+
+\subsection{Example: The \ren{} Radical}
+
+The Chinese character \ren{} (\textit{rén}, ``person'') demonstrates operational behavior:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Transformation} & \textbf{Result} & \textbf{State Change} \\
+\midrule
+\ren{} (base) & person & Generic entity \\
+\ren{} + \yi{} → \da{} & big & Amplification \\
+\ren{} + \ren{} → 从 & follow & Binary relation \\
+\ren{} × 3 → 众 & crowd & Collective \\
+\ren{} + □ → 囚 & prisoner & Containment \\
+\bottomrule
+\end{tabular}
+\caption{State transformations of \ren{} through graphical modifications}
+\end{table}
+
+\textbf{Key insight}: The modifications are not phonetic decorations. They are \textbf{state transformations}—graphical operations that change the computational context.
+
+\section{Scope and Limitations}
+
+\subsection{What This Monograph Provides}
+
+\begin{itemize}
+    \item Formal axiomatic system (A1--A5) for symbol composition
+    \item Proof of \TCOP{} theorem with machine verification
+    \item Comparative structural analysis (Harappan vs. Chinese)
+    \item Computational implementations (Python, C++)
+    \item Reproducible data analysis
+    \item Statistical predictions (testable)
+\end{itemize}
+
+\subsection{What This Monograph Does NOT Provide}
+
+We explicitly \textbf{do NOT}:
+
+\begin{nonclaim}[No Phonetic Decipherment]
+We do not claim to determine how Harappan symbols were pronounced, nor do we assign phonetic values to any signs.
+\end{nonclaim}
+
+\begin{nonclaim}[No Linguistic Translation]
+We do not provide word-by-word translations of inscriptions or claim to know what texts ``say'' in a linguistic sense.
+\end{nonclaim}
+
+\begin{nonclaim}[No Historical Interpretation]
+We do not claim to know the historical function, cultural context, or social meaning of inscriptions.
+\end{nonclaim}
+
+\begin{nonclaim}[No Complete Solution]
+We do not claim to have ``solved,'' ``cracked,'' or ``deciphered'' the Indus script in any conventional sense.
+\end{nonclaim}
+
+Our work is \textbf{foundational}: We provide mathematical tools for rigorous analysis. Future work may build on this foundation, but we make no claims beyond our formal framework.
+
+\section{Contributions to Scholarship}
+
+This work contributes:
+
+\begin{enumerate}
+    \item \textbf{Methodological innovation}: Applying formal methods to ancient scripts
+    \item \textbf{Theoretical framework}: State-based operational semantics for symbols
+    \item \textbf{Comparative insights}: Deep structural parallels with Chinese
+    \item \textbf{Falsifiable predictions}: Testable claims about symbol behavior
+    \item \textbf{Open science}: Fully reproducible, openly licensed
+\end{enumerate}
+
+\section{Organization of This Monograph}
+
+\begin{description}
+    \item[Chapter 2: Methodology] Formal definitions and epistemological stance
+    \item[Chapter 3: Inventory] Analysis of symbols 1--44
+    \item[Chapter 4: Operators] Composition rules and compatibility
+    \item[Chapter 5: Statistics] Frequency, position, bigram analysis
+    \item[Chapter 6: Automata] Finite state machine model
+    \item[Chapter 7: Scope] Mathematical boundaries and limitations
+    \item[Chapter 8: Comparisons] Ancient Chinese parallels
+    \item[Chapter 9: Modern Equivalents] JSON, relational logic
+    \item[Chapter 10: \TCOP{} Theorem] Main result and proof
+    \item[Chapter 11: Conclusion] Future work and implications
+\end{description}
+
+Appendices provide complete data tables, operator catalogs, reproducibility instructions, and detailed non-claims.
+
+\section{How to Read This Monograph}
+
+\textbf{For researchers}:
+\begin{itemize}
+    \item Read sequentially for complete argument
+    \item Consult appendices for data details
+    \item Check formal verification code in repository
+\end{itemize}
+
+\textbf{For mathematicians}:
+\begin{itemize}
+    \item Start with Chapter 2 (definitions)
+    \item Focus on Chapters 6 and 10 (formal content)
+    \item Review proof assistant implementations
+\end{itemize}
+
+\textbf{For the public}:
+\begin{itemize}
+    \item Read Chapter 1 (this introduction)
+    \item Consult public materials in repository
+    \item See FAQ for common questions
+\end{itemize}
+
+Let us begin.

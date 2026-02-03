@@ -1,0 +1,167 @@
+{
+  "description": "Example operational records in JSON format to demonstrate the state-transformation paradigm",
+  "examples": [
+    {
+      "id": "example_1",
+      "description": "Simple entity instantiation",
+      "record": {
+        "base_class": "entity",
+        "symbol_id": 26,
+        "operations": [
+          {
+            "operator": "instantiate",
+            "modifier": "dot",
+            "result_symbol": 27
+          }
+        ],
+        "final_state": {
+          "class": "entity",
+          "property": "instantiated",
+          "count": 1
+        }
+      },
+      "human_readable": "One specific entity (instantiated from generic entity 26)"
+    },
+    {
+      "id": "example_2",
+      "description": "Quantified and qualified entity",
+      "record": {
+        "base_class": "entity",
+        "symbol_id": 26,
+        "operations": [
+          {
+            "operator": "quantify",
+            "modifier": 3,
+            "result_state": "three_entities"
+          },
+          {
+            "operator": "qualify",
+            "modifier": "authorized",
+            "result_state": "three_authorized_entities"
+          }
+        ],
+        "final_state": {
+          "class": "entity",
+          "property": "authorized",
+          "count": 3
+        }
+      },
+      "human_readable": "Three authorized entities"
+    },
+    {
+      "id": "example_3",
+      "description": "Delimited collective with closure",
+      "record": {
+        "base_class": "entity",
+        "symbol_id": 26,
+        "operations": [
+          {
+            "operator": "quantify",
+            "modifier": "multiple",
+            "result_state": "collective"
+          },
+          {
+            "operator": "delimit",
+            "modifier": "bracket",
+            "result_state": "contained_collective"
+          },
+          {
+            "operator": "close",
+            "modifier": "terminal_343",
+            "result_state": "closed_record"
+          }
+        ],
+        "final_state": {
+          "class": "entity",
+          "property": "contained_collective_closed",
+          "count": "multiple",
+          "terminal": true
+        }
+      },
+      "human_readable": "A group of entities, contained, record closed"
+    },
+    {
+      "id": "example_4_chinese",
+      "description": "Ancient Chinese parallel: 人 transformations",
+      "record": {
+        "base_class": "person",
+        "symbol": "人",
+        "operations": [
+          {
+            "operator": "add_horizontal_stroke",
+            "modifier": "一",
+            "result_symbol": "大",
+            "result_state": "amplified_person"
+          }
+        ],
+        "final_state": {
+          "class": "person_derived",
+          "property": "big",
+          "semantic": "amplified"
+        }
+      },
+      "human_readable": "Person + one (line) = big (amplified state)",
+      "note": "This demonstrates the operational semantics in a KNOWN system (ancient Chinese)"
+    },
+    {
+      "id": "example_5_chinese_collective",
+      "description": "Ancient Chinese parallel: Multiple persons",
+      "record": {
+        "base_class": "person",
+        "symbol": "人",
+        "operations": [
+          {
+            "operator": "duplicate",
+            "count": 2,
+            "result_symbol": "从",
+            "result_state": "following_relation"
+          }
+        ],
+        "final_state": {
+          "class": "person_derived",
+          "property": "relational",
+          "semantic": "follow"
+        }
+      },
+      "human_readable": "Person + person = follow (binary social relation)",
+      "note": "Demonstrates composition creating relational state"
+    },
+    {
+      "id": "example_6_validation",
+      "description": "Invalid operation (demonstrates TCOP constraint)",
+      "record": {
+        "base_class": "entity",
+        "symbol_id": 26,
+        "operations": [
+          {
+            "operator": "terminal_close",
+            "modifier": "terminal_343",
+            "result_state": "closed"
+          },
+          {
+            "operator": "qualify",
+            "modifier": "authorized",
+            "result_state": "ERROR",
+            "error": "Cannot apply operations after terminal symbol",
+            "violates": "Axiom A4 (Terminal Closure)"
+          }
+        ],
+        "final_state": null,
+        "is_valid": false
+      },
+      "human_readable": "INVALID: Cannot modify after terminal symbol",
+      "note": "This demonstrates our axioms reject invalid sequences"
+    }
+  ],
+  "schema_notes": {
+    "base_class": "Semantic category (Axiom A1)",
+    "operations": "Sequence of transformations (Axiom A2, A3)",
+    "terminal": "Boolean indicating sequence closure (Axiom A4)",
+    "is_valid": "Whether sequence satisfies all axioms"
+  },
+  "comparative_notes": {
+    "why_json": "JSON demonstrates state-based computation familiar to modern readers",
+    "key_insight": "Ancient symbols may work like data transformations, not alphabetic spelling",
+    "falsifiability": "Our axioms predict which sequences are valid/invalid—testable claim"
+  }
+}

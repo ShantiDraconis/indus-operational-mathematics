@@ -1,0 +1,7 @@
+{
+  "family_id": "328-372",
+  "description": "First symbol family",
+  "members": [328, 329, 330, 331, 332],
+  "common_features": ["vertical_element", "symmetric"],
+  "note": "Placeholder data for future analysis"
+}
