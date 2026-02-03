@@ -53,3 +53,28 @@ output/*.pdf
 .pytest_cache/
 .coverage
 htmlcov/
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.env
+.venv
+env/
+venv/
+
+### C++ ###
+*.o
+*.obj
+*.exe
+*.out
+*.app
+example
+a.out
+
+### IDE ###
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
