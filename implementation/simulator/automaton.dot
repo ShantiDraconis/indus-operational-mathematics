@@ -1,0 +1,27 @@
+digraph IndusAutomaton {
+    rankdir=LR;
+    node [shape=circle];
+    
+    S5 [shape=doublecircle, label="S5\nFECHADA"];
+    S0 [label="S0\nINICIAL"];
+    S1 [label="S1\nENTIDADE"];
+    S2 [label="S2\nQUALIFICADA"];
+    S3 [label="S3\nQUANTIFICADA"];
+    S4 [label="S4\nRELACIONADA"];
+    
+    start [shape=point];
+    start -> S0;
+    
+    S0 -> S1 [label="ENT_*"];
+    S1 -> S2 [label="OP_QUAL"];
+    S1 -> S3 [label="OP_COUNT"];
+    S1 -> S4 [label="OP_REL"];
+    S1 -> S5 [label="OP_CLOSE"];
+    S2 -> S2 [label="OP_QUAL"];
+    S2 -> S3 [label="OP_COUNT"];
+    S2 -> S4 [label="OP_REL"];
+    S2 -> S5 [label="OP_CLOSE"];
+    S3 -> S4 [label="OP_REL"];
+    S3 -> S5 [label="OP_CLOSE"];
+    S4 -> S5 [label="OP_CLOSE"];
+}
