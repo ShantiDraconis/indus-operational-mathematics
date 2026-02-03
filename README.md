@@ -402,6 +402,563 @@ See [public/faq.md](public/faq.md) for detailed answers, including:
 ---
 
 *"In ancient symbol systems, the symbol is not the name of the thing, but the operator on the state."*
+A formal implementation of the Harappan axiomatic system and its structural comparison with ancient Chinese writing.
+
+## Overview
+
+This repository contains:
+
+1. **Formal Axiomatic System** - 31 axioms defining Harappan operational mathematics
+2. **Chinese-Harappan Comparison** - Structural analysis of radical operators
+3. **Python Implementation** - Working code demonstrating the formal system
+4. **Theoretical Framework** - Complete documentation of theorems and proofs
+
+## Key Concepts
+
+### The Core Principle
+
+**A base symbol does NOT carry fixed meaning.**
+- It defines a **CLASS**
+- State emerges through **composition**
+- This is true in both Harappan and ancient Chinese systems
+
+### Formal Expression
+
+```
+Estado = Base ∘ ∑Operadores
+```
+
+Where:
+- **Base** defines the entity class
+- **Operators** modify the state
+- **Result** is deterministic and compositional
+
+## Repository Structure
+
+```
+indus-operational-mathematics/
+├── docs/
+│   ├── comparativo-operacional.md    # Chinese-Harappan comparison
+│   └── axiomatica-harappana.md       # Complete axiomatic system
+├── src/
+│   └── harappan_core.py              # Core implementation
+├── examples/
+│   └── chinese_harappan_comparison.py # Demonstration
+└── README.md
+```
+
+## The Axiomatic System
+
+### Foundational Axioms (0-3)
+
+- **Axiom 0**: Existence of the operational system
+- **Axiom 1**: Form-function duality (417 symbols)
+- **Axiom 2**: Hierarchical compositionality (30 bases, 15 modifiers)
+- **Axiom 3**: Finite state space (max length 5)
+
+### Compositional Axioms (4-8)
+
+- **Axiom 4**: Entity primacy (all inscriptions start with ENT)
+- **Axiom 5**: Strict linear order (ENT < QUAL < COUNT < REL < CLOSE)
+- **Axiom 6**: Terminal closure (all inscriptions end with CLOSE)
+- **Axiom 7**: Layer consistency (no functional synonyms)
+- **Axiom 8**: Property inheritance (class preserved under modification)
+
+### Dynamic Axioms (9-12)
+
+Implements a deterministic finite automaton (DFA):
+- **Axiom 9**: System determinism
+- **Axiom 10**: Monotone progression (states only advance)
+- **Axiom 11**: Closure absorption (q₅ is absorbing state)
+- **Axiom 12**: Functional completeness
+
+### Semantic Axioms (13-15)
+
+- **Axiom 13**: State-world correspondence (injective mapping)
+- **Axiom 14**: Information conservation (no ambiguity)
+- **Axiom 15**: Institutional closure (all states are complete)
+
+[See docs/axiomatica-harappana.md for complete axioms 16-31 and theorems]
+
+## Key Theorems
+
+### Theorem 1: System Completeness
+The system is complete for its institutional domain.
+
+### Theorem 2: Decidability
+Any inscription's validity is decidable in O(|w|) time.
+
+### Theorem 3: DFA Isomorphism
+The system is isomorphic to a deterministic finite automaton.
+
+### Theorem 4: Shannon Optimality
+The system achieves Shannon's limit for symbolic institutional systems.
+
+### Theorem 5: Descriptive Incompleteness
+The system is incomplete for description but complete for validation.
+
+## Chinese-Harappan Structural Equivalence
+
+### The Radical 人 (rén) as Operator
+
+The Chinese radical 人 operates exactly like a Harappan base token:
+
+| Operation | Chinese | Harappan Equivalent |
+|-----------|---------|---------------------|
+| Duplication | 人 → 从 | Pair symbol |
+| Intensification | 人 + 一 → 大 | Crown/comb modifier |
+| Channel | 人 + 口 → 吃 | U-shape operator |
+| Force | 人 + 力 → 男 | Arm/hook modifier |
+| Internal State | 人 + 心 → 念 | Fill modifier |
+| Authority | 人 + 王 → 全 | Roof operator (342-348) |
+
+### Radicals 1-44 as Operators
+
+| Radical | Function |
+|---------|----------|
+| 一 | intensity / axis |
+| 丨 | partition |
+| 丶 | instance |
+| 丿 | direction |
+| 人 | agent |
+| 口 | channel |
+| 心 | internal state |
+| 力 | energy |
+
+## Usage
+
+### Running the Core Implementation
+
+```bash
+cd src
+python harappan_core.py
+```
+
+Output demonstrates:
+- Symbol composition
+- Automaton validation
+- Semantic interpretation
+
+### Running the Chinese-Harappan Comparison
+
+```bash
+cd examples
+python chinese_harappan_comparison.py
+```
+
+Output shows:
+- Operator mappings
+- Parallel compositions
+- Structural equivalence
+
+## Implementation Details
+
+### Symbol Classes
+
+```python
+class SymbolClass(Enum):
+    ENT = "Entity"        # Base agent/entity
+    QUAL = "Qualifier"    # State modifier
+    COUNT = "Counter"     # Quantity
+    REL = "Relation"      # Institutional relation
+    CLOSE = "Closure"     # Validation marker
+```
+
+### Automaton States
+
+```python
+class State(Enum):
+    Q0 = "Initial"
+    Q1 = "Entity_Loaded"
+    Q2 = "Qualified"
+    Q3 = "Counted"
+    Q4 = "Related"
+    Q5 = "Closed"         # Absorbing state
+```
+
+### Composition Operator
+
+```python
+def compose(base: int, modifiers: Set[str]) -> Symbol:
+    """
+    Implements the ⊕ operator
+    Base ⊕ Modifiers → Composite Symbol
+    """
+```
+
+## Theoretical Implications
+
+### 1. Reinterpretation of History
+
+If Harappan is complete for validation, later narrative writing systems 
+represent a regression in institutional efficiency.
+
+### 2. Computation Theory
+
+Every computer is isomorphic to an extended Harappan state machine.
+
+### 3. Philosophy of Mathematics
+
+Mathematical proof = institutional validation of abstract relations.
+
+## Research Program
+
+### Testable Hypotheses
+
+1. **H₁**: Children learn validation systems faster in Harappan notation
+2. **H₂**: Companies using Harappan protocols are more efficient
+3. **H₃**: BCIs based on Harappan require less neural bandwidth
+
+### Crucial Experiments
+
+1. Implement Harappan OS and compare with Unix
+2. Teach mathematics via Harappan symbols to control group
+3. Measure brain activity during Harappan vs. natural language processing
+
+### Falsifiable Predictions
+
+1. ∃S with |S| < 45 symbols and similar completeness → Harappan not optimal
+2. Damage to validation module doesn't affect consciousness → consciousness ≠ q₅
+3. ∃ institutional system not mappable → Harappan not universal
+
+## The Transcendence Principle
+
+**Axiom Ω (The Harappan Principle)**:
+
+```
+∃H [∀S (Sistema(S) → (∃f: S → H ∧ f preserves validation))]
+```
+
+**Corollaries**:
+- Ω1: Everything that can be validated can be Harappanized
+- Ω2: The human mind is an implementation of H
+- Ω3: The universe computes its own state using H
+
+## Conclusion
+
+This system demonstrates that:
+
+1. **Structural Identity**: Chinese radicals and Harappan operators share the same base–operator–state logic
+2. **Cognitive Inheritance**: Universal operational principles in early writing
+3. **Institutional Optimality**: Harappan achieved optimal validation efficiency
+
+The radical 人 in ancient Chinese and the entity-base 373 in Harappan are **not** 
+semantically equivalent but **structurally identical** - both operate as base 
+classes whose states emerge through operator composition.
+
+---
+
+## Academic Citation
+
+> "In early Chinese writing, the radical 人 operates as a base agent class whose 
+> semantic state emerges through operator composition, mirroring the same 
+> base–operator–state logic observed in the Indus script."
+
+## License
+
+See LICENSE file for details.
+
+## Contributing
+
+This system is theoretically complete. Extensions would be either redundant or 
+metaphysical. What remains is implementation and world transformation through 
+this knowledge.
+# Indus Operational Mathematics: TCOP Implementation
+
+This repository contains the formal specification, proof, and computational implementation of the **Theorem of Primitive Operational Composition (TCOP)**.
+
+## Overview
+
+The TCOP establishes that early non-phonetic graphic systems (such as the Indus Valley script, Ancient Chinese characters, early Egyptian hieroglyphs, and the Phaistos Disk) encode ontological classes and operational state transitions through finite graphical composition, implementing a closed algebra of validation rather than natural language.
+
+### One-Line Summary
+
+**Theorem (Primitive Operational Composition):** Early non-phonetic graphic systems encode ontological classes and operational state transitions through finite graphical composition, implementing a closed algebra of validation rather than natural language.
+
+## Contents
+
+- **tcop_theorem.tex** - Complete LaTeX document with formal theorem, proof, corollaries, and defense against criticisms
+- **tcop_model.py** - Python implementation of the computational model (DFA + attributes)
+- **examples/** - Example implementations for Harappan and Ancient Chinese systems
+
+## Key Concepts
+
+### Formal System Definition
+
+A primitive graphic system is defined as **S = (B, O, Σ)** where:
+- **B** = finite set of base symbols (ontological classes)
+- **O** = finite set of graphical operators
+- **Σ** = set of realized graphic states (compound symbols)
+
+### Five Fundamental Hypotheses
+
+1. **Finiteness:** |B| ≪ |Σ| (base symbols much fewer than realized states)
+2. **Composition:** Every symbol s ∈ Σ can be decomposed as s = oₙ ∘ oₙ₋₁ ∘ ... ∘ o₁(b)
+3. **Stability:** Operators don't create new classes, only new states
+4. **Closure:** Terminal operators mark completion states
+5. **Distribution:** Frequencies follow truncated Zipf-like hierarchy
+
+### Modern Equivalents
+
+Systems satisfying TCOP are formally equivalent to:
+- Workflows
+- Ledgers
+- Finite automata
+- JSON validation schemas
+- State machines
+
+They are **NOT** equivalent to:
+- Literary texts
+- Phonetic writing systems
+- Natural language encodings
+
+## Usage
+
+### Running the Computational Model
+
+```bash
+python tcop_model.py
+```
+
+This will demonstrate:
+1. Harappan script as a TCOP system
+2. Ancient Chinese radicals as a TCOP system
+3. TCOP validation for each system
+4. Example states and their frequencies
+5. JSON export of system structure
+
+### Generating the LaTeX Document
+
+```bash
+pdflatex tcop_theorem.tex
+```
+
+Or use your preferred LaTeX compiler. The document includes:
+- Formal theorem statement
+- Complete proof with lemmas
+- Four corollaries (Chinese, Harappan, Cognitive Universal, Mathematical Limit)
+- Defense against linguistic, archaeological, historical, and universalist criticisms
+
+## Examples
+
+### Harappan Script
+
+```python
+from tcop_model import create_harappan_example, TCOPValidator
+
+# Create system
+harappan = create_harappan_example()
+print(harappan)  # GraphicSystem('Harappan Script': |B|=4, |O|=5, |Σ|=29)
+
+# Validate TCOP conditions
+results = TCOPValidator.validate_system(harappan)
+print(f"TCOP satisfied: {results['tcop_satisfied']}")  # True
+```
+
+### Ancient Chinese
+
+```python
+from tcop_model import create_ancient_chinese_example
+
+# Create system
+chinese = create_ancient_chinese_example()
+
+# Get state by composition: 人 + duplication = 从 (follow)
+state = chinese.get_state_by_composition("person", ["double", "terminal"])
+print(state)  # 人 (rén) + [double, terminal]
+```
+
+## Corollaries
+
+### 1. Ancient Chinese Application
+
+The radical 人 (rén) doesn't have fixed semantic meaning but defines an agent class whose state varies with operators:
+
+```
+State = Human ∘ Σ Operators
+```
+
+### 2. Harappan Application
+
+Harappan symbols are validated states, explaining:
+- Short inscriptions (5-10 symbols)
+- No narrative structure
+- Recurrent terminal signs
+- Saturation at ~417 states
+
+### 3. Cognitive Universal
+
+Systems like Harappan, Egyptian hieroglyphs, Ancient Chinese, and Phaistos Disk share a common cognitive substrate where graphical operators precede phonetic languages.
+
+### 4. Mathematical Limit
+
+Mathematics in such systems is finite, relational, and state-based:
+
+```
+N_finite + relations + partial orders
+```
+
+Symbolic algebra requires a different paradigm.
+
+## Defense Against Criticisms
+
+### Linguistic Criticism
+
+**Q:** "All writing systems encode language, so these must encode language."
+
+**A:** This assumes the conclusion. TCOP shows these systems implement operational algebras. The absence of long narratives, phonetic correspondences, and recursive structures supports the operational interpretation.
+
+### Archaeological Criticism
+
+**Q:** "Without bilingual texts, we can't know what these encode."
+
+**A:** TCOP is based on structural analysis, not translation. Mathematical properties (finite states, compositional operators, statistical regularities) can be determined without decipherment.
+
+### Historical Criticism
+
+**Q:** "These systems evolved into phonetic writing, so they must have been proto-phonetic."
+
+**A:** Evolution doesn't imply identity. TCOP describes systems at a specific historical moment. Later phonetic development doesn't invalidate earlier operational nature.
+
+### Universalist Criticism
+
+**Q:** "The theorem claims universal cognitive constraints without evidence."
+
+**A:** TCOP claims structural equivalence under specific constraints (finite memory, institutional record-keeping, visual distinctiveness), not universal laws. It makes testable predictions.
+
+## Mathematical Properties
+
+The proof establishes four key lemmas:
+
+1. **Finite State Space:** |Σ| ≤ |B| · ∏(|Oᵢ| + 1)
+2. **Operational Closure:** System partitions into equivalence classes with terminal states
+3. **Automaton Equivalence:** System ≡ DFA with attribute functions
+4. **Non-linguistic Nature:** Structural properties incompatible with natural language
+
+## Testable Predictions
+
+TCOP predicts that systems satisfying its conditions will exhibit:
+
+1. ✓ Short inscriptions (bounded by finite state space)
+2. ✓ Recurrent base symbols across corpus
+3. ✓ Systematic graphical modifications
+4. ✓ Terminal/closing symbols
+5. ✓ Truncated Zipf distribution (α ∈ [0.8, 1.2])
+6. ✗ Long narrative texts
+7. ✗ Recursive grammatical structures
+8. ✗ Unbounded symbol combinations
+
+## Applications
+
+### Undeciphered Scripts
+
+TCOP provides a framework for analyzing:
+- Indus Valley script
+- Linear A
+- Rongorongo
+- Proto-Elamite
+- Other undeciphered systems
+
+### Comparative Analysis
+
+TCOP enables formal comparison across:
+- Different historical periods
+- Different geographical regions
+- Different cultural contexts
+
+Without assuming common origin or continuous transmission.
+
+## Implementation Details
+
+### State Representation
+
+States are represented as tuples (base, operators):
+
+```python
+State(base=BaseSymbol("fish", "Fish", "animal"),
+      operators=frozenset(["stroke1", "terminal"]))
+```
+
+### Transition Function
+
+Transitions apply operators to states:
+
+```python
+δ((b, O'), o) = (b, O' ∪ {o})
+```
+
+### Accepting States
+
+States containing terminal operators are accepting:
+
+```python
+F = {(b, O') : O' ∩ O_T ≠ ∅}
+```
+
+## Limitations
+
+TCOP does **NOT** claim:
+- Direct historical connection between systems
+- Linguistic identity across systems
+- Cultural transmission
+- Universality without exceptions
+
+TCOP claims **ONLY**:
+- Structural equivalence under common cognitive and functional constraints
+
+## Future Work
+
+1. **Extended Corpus Analysis:** Apply TCOP to complete Harappan corpus
+2. **Statistical Validation:** Detailed Zipf distribution analysis
+3. **Comparative Studies:** Cross-system structural comparison
+4. **Computational Tools:** Automated TCOP validation tools
+5. **Archaeological Integration:** Combine with archaeological context
+6. **Cognitive Science:** Link to modern cognitive theories
+
+## References
+
+### Primary Sources
+- Indus Valley inscriptions corpus
+- Ancient Chinese oracle bone inscriptions
+- Early Egyptian hieroglyphic texts
+- Phaistos Disk
+
+### Theoretical Background
+- Finite automata theory
+- Formal language theory
+- Cognitive archaeology
+- History of writing systems
+
+## License
+
+See LICENSE file for details.
+
+## Citation
+
+If you use this work, please cite:
+
+```
+TCOP: Theorem of Primitive Operational Composition
+Repository: indus-operational-mathematics
+Year: 2026
+```
+
+## Contributing
+
+Contributions welcome, especially:
+- Corpus data for validation
+- Additional system implementations
+- Statistical analyses
+- Criticism and counter-arguments
+- Extensions and refinements
+
+## Contact
+
+For questions, discussions, or collaborations, please open an issue in this repository.
+
+---
+
+**Note:** This is a theoretical framework for understanding primitive graphic systems. It makes testable predictions but does not claim to "decipher" undeciphered scripts. The value lies in providing structural tools for analysis and comparison.
 # Indus Operational Mathematics: Quantum Archaeology Framework
 
 ## Quantum Leaps in Communication: Entanglement & Ancient Scripts
