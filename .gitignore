@@ -69,6 +69,20 @@ wheels/
 *.egg
 *.egg
 
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 ### Generated outputs ###
 symbol_network.json
 # PyTest
@@ -77,6 +91,7 @@ symbol_network.json
 # Virtual environments
 venv/
 ENV/
+env/
 env/
 
 # IDE
