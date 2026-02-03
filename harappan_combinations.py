@@ -12,7 +12,7 @@ of Harappan symbols (373-417) with graphic operators, including:
 
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import List, Dict, Set, Optional, Tuple, FrozenSet
+from typing import List, Dict, Set, Optional, Tuple, FrozenSet, Any
 from itertools import product, combinations, combinations_with_replacement
 import json
 
@@ -548,7 +548,7 @@ class TransitionAnalyzer:
         
         return reachable
     
-    def analyze_closure_properties(self) -> Dict[str, any]:
+    def analyze_closure_properties(self) -> Dict[str, Any]:
         """
         Analyze closure properties of symbol families under composition.
         
@@ -582,7 +582,7 @@ class TransitionAnalyzer:
         return results
 
 
-def create_comprehensive_analysis() -> Dict[str, any]:
+def create_comprehensive_analysis() -> Dict[str, Any]:
     """
     Create a comprehensive analysis of all Harappan symbol combinations.
     

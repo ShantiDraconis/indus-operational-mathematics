@@ -219,7 +219,7 @@ def symbols_composable (s1 s2 : Nat) : Bool :=
   | some f1, some f2 => families_composable f1 f2
   | _, _ => false
 
-/-- Total number of possible symbol pairs (45²= 2,025) -/
+/-- Total number of possible symbol pairs (45 * 45 = 2,025) -/
 def total_pairs : Nat := 2025
 
 /-- Count composable symbol pairs -/
