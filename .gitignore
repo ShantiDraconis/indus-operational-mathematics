@@ -20,6 +20,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+### Python ###
 __pycache__/
 *.pyc
 
@@ -64,6 +66,7 @@ var/
 wheels/
 *.egg-info/
 .installed.cfg
+*.egg
 *.egg
 
 # PyInstaller

@@ -1,0 +1,67 @@
+{
+  "title": "Indus Operational System: A Formal Model of Harappan Administrative Notation",
+  "description": "Complete formal reconstruction of the Indus script as a finite-state operational system for institutional validation. This work presents a novel interpretation of the Indus script not as a phonetic language, but as a mathematical protocol for administrative record-keeping, implemented as a finite automaton with 6 states and 417 catalogued symbols.",
+  "creators": [
+    {
+      "name": "ShantiDraconis",
+      "affiliation": "Independent Research"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "publication_type": "software",
+  "keywords": [
+    "Indus script",
+    "Indus Valley Civilization",
+    "Harappan culture",
+    "formal systems",
+    "finite automata",
+    "operational mathematics",
+    "ancient notation systems",
+    "administrative protocols",
+    "computational archaeology",
+    "epigraphy",
+    "computational linguistics",
+    "formal languages",
+    "automata theory"
+  ],
+  "subjects": [
+    {
+      "term": "Archaeology",
+      "identifier": "https://zbmath.org/classification/?q=cc:01"
+    },
+    {
+      "term": "Computer Science - Formal Languages",
+      "identifier": "https://arxiv.org/archive/cs.FL"
+    },
+    {
+      "term": "History - Ancient History",
+      "identifier": "https://arxiv.org/archive/physics.hist-ph"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/ShantiDraconis/indus-operational-mathematics"
+    }
+  ],
+  "contributors": [],
+  "references": [
+    "Parpola, A. (1994). Deciphering the Indus Script. Cambridge University Press.",
+    "Mahadevan, I. (1977). The Indus Script: Texts, Concordance and Tables. Archaeological Survey of India.",
+    "Wells, B. (2011). Epigraphic Approaches to Indus Writing. Oxbow Books.",
+    "Farmer, S., Sproat, R., & Witzel, M. (2004). The Collapse of the Indus-Script Thesis. Electronic Journal of Vedic Studies, 11(2).",
+    "Rao, R. P. N., et al. (2009). Entropic Evidence for Linguistic Structure in the Indus Script. Science, 324(5931)."
+  ],
+  "communities": [
+    {
+      "identifier": "archaeology"
+    },
+    {
+      "identifier": "ancient-scripts"
+    }
+  ],
+  "grants": [],
+  "version": "1.0.0",
+  "language": "eng"
+}

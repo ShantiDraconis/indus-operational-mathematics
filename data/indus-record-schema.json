@@ -1,0 +1,210 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://indus-operational-mathematics.org/schemas/indus-record.json",
+  "title": "Indus Script Record",
+  "description": "JSON Schema for Harappan administrative notation records",
+  "type": "object",
+  "required": ["entity", "closure"],
+  "properties": {
+    "entity": {
+      "$ref": "#/definitions/entity",
+      "description": "The primary entity or object of the record"
+    },
+    "qualifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/operator"
+      },
+      "description": "Optional qualification operators applied to the entity"
+    },
+    "quantity": {
+      "$ref": "#/definitions/quantity",
+      "description": "Optional quantification specification"
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/relation"
+      },
+      "description": "Optional relational operators establishing connections"
+    },
+    "closure": {
+      "$ref": "#/definitions/closure",
+      "description": "Required closure operator marking the end of the record"
+    }
+  },
+  "definitions": {
+    "entity": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "ENT_OVAL",
+            "ENT_U",
+            "ENT_HASTE",
+            "ENT_ANIMAL",
+            "ENT_METRICA"
+          ],
+          "description": "Entity class type"
+        },
+        "id": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 399,
+          "description": "Specific symbol ID within the entity class"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the entity"
+        }
+      }
+    },
+    "operator": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "OP_QUAL",
+            "OP_SCOPE",
+            "Crown",
+            "SideBars",
+            "Fill",
+            "Dot",
+            "Stroke"
+          ],
+          "description": "Operator type"
+        },
+        "value": {
+          "type": "string",
+          "description": "Optional operator value or parameter"
+        }
+      }
+    },
+    "quantity": {
+      "type": "object",
+      "required": ["value"],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Numeric quantity value"
+        },
+        "symbol_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 410,
+            "maximum": 417
+          },
+          "description": "OP_COUNT symbols used (410-417)"
+        }
+      }
+    },
+    "relation": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "pair",
+            "sequence",
+            "hierarchy",
+            "exchange",
+            "transformation",
+            "possession",
+            "containment",
+            "production",
+            "distribution",
+            "validation"
+          ],
+          "description": "Relation type"
+        },
+        "id": {
+          "type": "integer",
+          "minimum": 400,
+          "maximum": 409,
+          "description": "OP_REL symbol ID (400-409)"
+        },
+        "target": {
+          "type": "string",
+          "description": "Optional target entity reference"
+        }
+      }
+    },
+    "closure": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "simple",
+            "confirmed",
+            "validated",
+            "sealed",
+            "absolute",
+            "hierarchical",
+            "terminal"
+          ],
+          "description": "Closure type"
+        },
+        "id": {
+          "type": "integer",
+          "minimum": 342,
+          "maximum": 348,
+          "description": "OP_CLOSE symbol ID (342-348)"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "entity": {
+        "type": "ENT_OVAL",
+        "id": 373,
+        "description": "basic_token"
+      },
+      "closure": {
+        "type": "simple",
+        "id": 342
+      }
+    },
+    {
+      "entity": {
+        "type": "ENT_ANIMAL",
+        "id": 200,
+        "description": "unicorn"
+      },
+      "quantity": {
+        "value": 3,
+        "symbol_ids": [410, 411]
+      },
+      "closure": {
+        "type": "confirmed",
+        "id": 343
+      }
+    },
+    {
+      "entity": {
+        "type": "ENT_OVAL",
+        "id": 373,
+        "description": "basic_token"
+      },
+      "relations": [
+        {
+          "type": "pair",
+          "id": 400
+        }
+      ],
+      "closure": {
+        "type": "absolute",
+        "id": 346
+      }
+    }
+  ]
+}

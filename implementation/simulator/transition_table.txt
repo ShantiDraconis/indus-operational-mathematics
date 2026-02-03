@@ -1,0 +1,16 @@
+Transition Table δ(state, symbol) → new_state
+======================================================================
+
+State      | ENT  | QUAL | COUNT | REL  | CLOSE 
+-----------+------+------+-------+------+-------
+S0 (INIT)  | S1   |  -   |   -   |  -   |   -   
+S1 (ENT)   |  -   | S2   |  S3   | S4   |  S5   
+S2 (QUAL)  |  -   | S2   |  S3   | S4   |  S5   
+S3 (QUANT) |  -   |  -   |   -   | S4   |  S5   
+S4 (REL)   |  -   |  -   |   -   |  -   |  S5   
+S5 (CLOSE) |  -   |  -   |   -   |  -   |   -   
+
+Legend:
+  S#   = State number
+  -    = Invalid transition
+  S5   = Accepting state (FECHADA/CLOSED)
