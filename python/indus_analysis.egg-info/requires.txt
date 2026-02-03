@@ -1,7 +1,0 @@
-numpy>=1.21.0
-scipy>=1.7.0
-tensorly>=0.8.0
-
-[dev]
-pytest-cov>=3.0.0
-pytest>=7.0.0
