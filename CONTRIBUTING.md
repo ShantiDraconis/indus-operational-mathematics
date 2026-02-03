@@ -1,6 +1,6 @@
-# Contributing to Harappa Operational Mathematics
+# Contributing to Indus Operational Mathematics
 
-Thank you for your interest in contributing to the Harappa Operational Mathematics System!
+Thank you for your interest in contributing to the Indus Operational Mathematics System!
 
 ## How to Contribute
 

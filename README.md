@@ -824,11 +824,8 @@ Key insights:
 - 🎯 **State Transformations**: Symbols operate as functions transforming states, not just phonetic markers
 - 🏛️ **Institutional Optimization**: Harappan script is optimized for administrative validation, not narrative
 - 🌐 **Universal Grammar**: ~45 fundamental operators underlie all ancient symbol systems
-# Indus Operational Mathematics
 
-A formal implementation of the Harappan axiomatic system and its structural comparison with ancient Chinese writing.
-
-## Overview
+## Repository Contents
 
 This repository contains:
 
@@ -836,6 +833,7 @@ This repository contains:
 2. **Chinese-Harappan Comparison** - Structural analysis of radical operators
 3. **Python Implementation** - Working code demonstrating the formal system
 4. **Theoretical Framework** - Complete documentation of theorems and proofs
+5. **Comparative Analysis** - Deep comparisons with other ancient writing systems
 
 ## Key Concepts
 
@@ -860,19 +858,22 @@ Where:
 ## Repository Structure
 
 ```
-docs/
-├── COMPARATIVE_ANALYSIS.md    # Deep comparison: Harappan vs Nordic Runes
-├── UNIFIED_ANALYSIS.md        # Multi-system analysis (5 writing systems)
-├── SYMBOL_DATABASE.md         # Complete catalog of Harappan symbols 1-44
-└── UNIVERSAL_GRAMMAR.md       # Formal grammar of ancient symbol systems
-indus-operational-mathematics/
 ├── docs/
-│   ├── comparativo-operacional.md    # Chinese-Harappan comparison
-│   └── axiomatica-harappana.md       # Complete axiomatic system
+│   ├── COMPARATIVE_ANALYSIS.md        # Deep comparison: Harappan vs Nordic Runes
+│   ├── UNIFIED_ANALYSIS.md            # Multi-system analysis (5 writing systems)
+│   ├── SYMBOL_DATABASE.md             # Complete catalog of Harappan symbols 1-44
+│   ├── UNIVERSAL_GRAMMAR.md           # Formal grammar of ancient symbol systems
+│   ├── comparativo-operacional.md     # Chinese-Harappan comparison
+│   └── axiomatica-harappana.md        # Complete axiomatic system
 ├── src/
-│   └── harappan_core.py              # Core implementation
+│   └── harappan_core.py               # Core implementation
 ├── examples/
 │   └── chinese_harappan_comparison.py # Demonstration
+├── formal/
+│   ├── lean/                          # Lean proof assistant files
+│   ├── coq/                           # Coq proof assistant files
+│   ├── isabelle/                      # Isabelle proof assistant files
+│   └── agda/                          # Agda proof assistant files
 └── README.md
 ```
 
