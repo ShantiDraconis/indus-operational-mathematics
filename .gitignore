@@ -193,6 +193,7 @@ rad.json
 #Test results file
 TestResults.xml
 
+# Python
 ### Python ###
 __pycache__/
 *.pyc
@@ -239,6 +240,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 *.egg
 
 # PyInstaller
@@ -264,6 +266,7 @@ symbol_network.json
 venv/
 ENV/
 env/
+.venv
 env/
 
 # IDE
