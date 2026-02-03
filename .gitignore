@@ -20,6 +20,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+__pycache__/
+*.pyc
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -29,6 +31,25 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+### LaTeX ###
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.synctex.gz
+env/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -45,6 +66,11 @@ wheels/
 .installed.cfg
 *.egg
 
+### Generated outputs ###
+symbol_network.json
+# PyTest
+.pytest_cache/
+
 # Virtual environments
 venv/
 ENV/
@@ -60,3 +86,42 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+MANIFEST
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.log
+
+### Project specific ###
+output/*.png
+output/*.pdf
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.env
+.venv
+env/
+venv/
+
+### C++ ###
+*.o
+*.obj
+*.exe
+*.out
+*.app
+example
+a.out
+
+### IDE ###
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
