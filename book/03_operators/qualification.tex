@@ -1,0 +1,94 @@
+% Qualification Operator
+\section{Qualification Operator}
+
+\subsection{Definition}
+
+The qualification operator $\text{QUAL}(\sigma, q)$ assigns an attribute, property, or modifier $q$ to an entity $\sigma$, refining or specifying its characteristics.
+
+\subsection{Formal Characteristics}
+
+\begin{itemize}
+    \item \textbf{Position}: Post-instantiation, can be medial or late
+    \item \textbf{Optionality}: Not required for valid sequences
+    \item \textbf{Dependency}: Modifies a prior entity
+    \item \textbf{Compositionality}: Multiple qualifications possible
+\end{itemize}
+
+\subsection{Qualification Types}
+
+\subsubsection{Size/Scale Qualifiers}
+Indicators of magnitude or size:
+\begin{itemize}
+    \item Large/small markers
+    \item Elaborated vs. simple forms
+    \item Scale modifiers
+\end{itemize}
+
+\subsubsection{Quality/State Qualifiers}
+Property indicators:
+\begin{itemize}
+    \item Condition markers (new, damaged, etc.)
+    \item Status indicators (active, completed, pending)
+    \item Grade or quality levels
+\end{itemize}
+
+\subsubsection{Origin/Source Qualifiers}
+Provenance markers:
+\begin{itemize}
+    \item Site or location indicators
+    \item Institutional source markers
+    \item Production context indicators
+\end{itemize}
+
+\subsection{Operational Semantics}
+
+Qualification adds:
+\begin{enumerate}
+    \item \textbf{Specificity}: Narrowing reference to particular instance
+    \item \textbf{Validation}: Confirming properties or authenticity
+    \item \textbf{Context}: Administrative or procedural metadata
+\end{enumerate}
+
+\subsection{Compositional Structure}
+
+Qualifications can compose:
+\begin{itemize}
+    \item [ENTITY][QUAL1][QUAL2] = Multiple independent qualifications
+    \item [ENTITY][QUAL1 $\circ$ QUAL2] = Nested or compound qualification
+\end{itemize}
+
+Order of qualification may be significant:
+\begin{itemize}
+    \item Fixed order suggests semantic scope
+    \item Variable order suggests independence
+\end{itemize}
+
+\subsection{Examples from Corpus}
+
+Attested patterns:
+\begin{itemize}
+    \item [ENTITY][SIZE-MARKER] = Size-qualified entity
+    \item [ENTITY][QUAL][COUNT] = Qualified entity with quantity
+    \item [ENTITY][QUAL1][QUAL2][TERMINAL] = Multi-qualified validated entity
+\end{itemize}
+
+\subsection{Linguistic Analogy}
+
+Qualification corresponds to:
+\begin{itemize}
+    \item Adjectives in natural language
+    \item Attribute assignment in programming: \texttt{entity.property = value}
+    \item XML/JSON attributes: \texttt{<entity property="value">}
+    \item Type refinement in formal systems
+\end{itemize}
+
+\subsection{Scope Constraints}
+
+Qualifications exhibit scope restrictions:
+\begin{itemize}
+    \item Some qualifiers apply only to specific entity types
+    \item Others are universal (can qualify any entity)
+    \item Combinatorial restrictions prevent certain qualifier pairs
+\end{itemize}
+
+These constraints are key evidence for the operational structure.

@@ -1,0 +1,90 @@
+% Formal Grammar
+\section{Formal Grammar of Indus Inscriptions}
+
+\subsection{Context-Free Grammar Approximation}
+
+While the Indus language is regular, we can describe it with a restricted CFG:
+
+\subsubsection{Production Rules}
+\begin{align*}
+S &\rightarrow \text{INST} \mid \text{INST}~M \\
+M &\rightarrow \text{COUNT} \mid \text{REL} \mid \text{QUAL} \mid \text{CLOSE} \\
+M &\rightarrow \text{COUNT}~M \mid \text{REL}~M \mid \text{QUAL}~M \\
+M &\rightarrow \text{CLOSE}
+\end{align*}
+
+\subsection{Regular Grammar}
+
+More precisely, as a right-linear grammar:
+
+\begin{align*}
+S &\rightarrow \text{inst}~A \mid \text{inst} \\
+A &\rightarrow \text{count}~A \mid \text{count}~B \mid \text{count} \\
+A &\rightarrow \text{rel}~A \mid \text{qual}~A \\
+B &\rightarrow \text{close}
+\end{align*}
+
+This generates exactly the regular language of valid inscriptions.
+
+\subsection{Extended Backus-Naur Form (EBNF)}
+
+Using modern notation:
+\begin{verbatim}
+inscription = instantiation [operations] [closure];
+operations = {counting | relation | qualification};
+counting = stroke+;
+stroke = "|";
+closure = terminal_sign;
+\end{verbatim}
+
+\subsection{Constraint Grammar}
+
+Additional constraints beyond context-free:
+
+\subsubsection{Type Constraints}
+\begin{itemize}
+    \item $\text{COUNT}$ must follow compatible $\text{INST}$
+    \item $\text{REL}$ must have appropriate left and right arguments
+    \item $\text{QUAL}$ must modify preceding entity
+\end{itemize}
+
+\subsubsection{Cardinality Constraints}
+\begin{itemize}
+    \item At most one $\text{INST}$ per inscription
+    \item At most one $\text{CLOSE}$ per inscription
+    \item Unbounded $\text{COUNT}$ (but practically limited)
+\end{itemize}
+
+\subsection{Parsing Algorithm}
+
+A simple shift-reduce parser suffices:
+
+\begin{verbatim}
+function parse(inscription):
+    state = INITIAL
+    for sign in inscription:
+        if can_shift(state, sign):
+            state = shift(state, sign)
+        else:
+            return ERROR
+    return state in ACCEPTING_STATES
+\end{verbatim}
+
+\subsection{Ambiguity}
+
+The grammar is unambiguous: each valid inscription has exactly one parse tree (proof by determinism of transition function).
+
+\subsection{Language Recognition}
+
+The grammar generates exactly the language:
+\[
+L_{\text{Indus}} = \{w \in \Sigma^* \mid w \text{ is a valid inscription}\}
+\]
+
+This language is:
+\begin{itemize}
+    \item Regular
+    \item Decidable
+    \item Not context-free (CFL properties unnecessary)
+    \item Finite (bounded by sign inventory and length constraints)
+\end{itemize}

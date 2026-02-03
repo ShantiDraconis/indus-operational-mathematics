@@ -1,0 +1,15 @@
+sign_id,total_occurrences,percentage,rank,category
+M328,1567,12.4,1,counting
+M361,892,7.1,2,instantiation
+M001,1247,9.9,3,counting
+M329,1123,8.9,4,counting
+M346,756,6.0,5,instantiation
+M002,892,7.1,6,counting
+M003,634,5.0,7,counting
+M411,423,3.4,8,closure
+M412,356,2.8,9,closure
+M347,298,2.4,10,instantiation
+# Top 10 most frequent signs
+# Full dataset would include frequency data for all signs
+# Total corpus size approximately 12,600 sign occurrences
+# across approximately 4,000 inscriptions

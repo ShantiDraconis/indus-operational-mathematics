@@ -1,0 +1,15 @@
+object_type,count,percentage,avg_length,max_length,typical_signs
+seal_square,2145,53.6,4.8,12,fish jar stroke terminal
+seal_rectangular,487,12.2,5.2,14,fish jar stroke animal terminal
+tablet_rectangular,623,15.6,6.1,17,multiple_strokes jar qualification
+tablet_triangular,234,5.9,4.2,9,simple_patterns
+pottery_large,298,7.5,2.3,6,ownership_marks simple_strokes
+pottery_small,156,3.9,1.8,4,maker_marks
+copper_tablet,34,0.9,3.4,7,special_contexts
+ivory_stick,12,0.3,7.8,11,unique_patterns
+shell,8,0.2,2.1,4,simple_marks
+# Object type distribution and characteristics
+# Seals dominate corpus (approximately 65%)
+# Tablets show longer inscriptions
+# Pottery shows simpler patterns
+# Suggests functional differentiation by medium

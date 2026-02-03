@@ -1,0 +1,78 @@
+% State and Time
+\section{State-Based Representation and Temporal Logic}
+
+\subsection{State Semantics}
+
+Each inscription represents a state in an administrative process:
+\begin{itemize}
+    \item \textbf{Current state}: What entities exist and their properties
+    \item \textbf{State transition}: How entities change or relate
+    \item \textbf{Terminal state}: Final validated configuration
+\end{itemize}
+
+\subsection{Temporal Aspects}
+
+\subsubsection{Sequence Order}
+Sign order encodes temporal or logical precedence:
+\begin{itemize}
+    \item Earlier signs: Prior operations or conditions
+    \item Later signs: Consequent operations or results
+    \item Terminal: Final state or outcome
+\end{itemize}
+
+\subsubsection{No Explicit Temporal Operators}
+The system lacks:
+\begin{itemize}
+    \item Past/present/future markers
+    \item Duration indicators
+    \item Temporal quantifiers (always, sometimes, eventually)
+\end{itemize}
+
+Temporality is implicit in operational sequence.
+
+\subsection{State Validation}
+
+\subsubsection{Validation States}
+\begin{itemize}
+    \item \textbf{Pending}: Unclosed sequence
+    \item \textbf{Validated}: Closed/sealed sequence
+    \item \textbf{Invalid}: Sequence violating constraints
+\end{itemize}
+
+\subsubsection{Validation Mechanisms}
+\begin{itemize}
+    \item Closure operators (explicit validation)
+    \item Physical sealing (implicit validation)
+    \item Institutional authorization (external validation)
+\end{itemize}
+
+\subsection{Process Flow}
+
+Inscriptions as workflow steps:
+\begin{enumerate}
+    \item Initiation: Instantiate entity/transaction
+    \item Specification: Add quantities, qualifications
+    \item Relation: Connect to other entities/processes
+    \item Closure: Validate and finalize
+\end{enumerate}
+
+\subsection{Reachability and Invariants}
+
+\subsubsection{Reachable States}
+State space analysis shows:
+\begin{itemize}
+    \item Not all theoretical states are attested
+    \item Some states are unreachable (violated constraints)
+    \item Distribution suggests preferred paths through state space
+\end{itemize}
+
+\subsubsection{State Invariants}
+Properties that hold across all valid states:
+\begin{itemize}
+    \item Instantiation precedes operation
+    \item Closure follows all other operations
+    \item Quantities follow entities
+    \item Relations maintain type constraints
+\end{itemize}
+
+These invariants are the formal core of the operational system.

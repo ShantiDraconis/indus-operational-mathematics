@@ -1,0 +1,78 @@
+% Relation Operator
+\section{Relation Operator}
+
+\subsection{Definition}
+
+The relation operator $\text{REL}(\sigma, \tau)$ establishes a connection, association, or relationship between two entities $\sigma$ and $\tau$.
+
+\subsection{Formal Characteristics}
+
+\begin{itemize}
+    \item \textbf{Position}: Medial, between entities
+    \item \textbf{Arity}: Binary (connects two arguments)
+    \item \textbf{Dependency}: Requires at least one prior entity
+    \item \textbf{Typing}: May be type-restricted (specific entity pairs)
+\end{itemize}
+
+\subsection{Relational Sign Classes}
+
+\subsubsection{Spatial Relations}
+Signs indicating physical or spatial relationships:
+\begin{itemize}
+    \item Enclosure signs (containment)
+    \item Juxtaposition markers (adjacency)
+    \item Orientation indicators (directional relations)
+\end{itemize}
+
+\subsubsection{Hierarchical Relations}
+Signs suggesting organizational structure:
+\begin{itemize}
+    \item Superior-subordinate markers
+    \item Ownership or control indicators
+    \item Administrative chains of authority
+\end{itemize}
+
+\subsubsection{Transactional Relations}
+Signs connecting transaction participants:
+\begin{itemize}
+    \item Source-destination markers
+    \item Exchange indicators
+    \item Transfer operators
+\end{itemize}
+
+\subsection{Operational Semantics}
+
+Relations express:
+\begin{enumerate}
+    \item \textbf{Association}: Entity A is related to entity B
+    \item \textbf{Attribution}: Entity A has property B
+    \item \textbf{Transformation}: Entity A becomes/produces entity B
+    \item \textbf{Validation}: Entity A authorizes/validates entity B
+\end{enumerate}
+
+\subsection{Logical Properties}
+
+Relations may exhibit:
+\begin{itemize}
+    \item \textbf{Reflexivity}: $R(x,x)$ may or may not hold
+    \item \textbf{Symmetry}: $R(x,y) \Rightarrow R(y,x)$ (rare in administrative contexts)
+    \item \textbf{Transitivity}: $R(x,y) \land R(y,z) \Rightarrow R(x,z)$ (common in hierarchies)
+\end{itemize}
+
+\subsection{Examples from Corpus}
+
+Attested patterns:
+\begin{itemize}
+    \item [ENTITY1][REL][ENTITY2] = Basic relational structure
+    \item [ENTITY][REL][COUNT] = Entity-quantity relation
+    \item [ENTITY1][REL][ENTITY2][TERMINAL] = Validated relation
+\end{itemize}
+
+\subsection{State Transition Interpretation}
+
+Relations can be viewed as state transitions:
+\[
+Q_{\text{entity1}} \xrightarrow{\text{REL}} Q_{\text{entity2}}
+\]
+
+This interpretation aligns with finite automaton models where relations represent state transitions in an administrative process.

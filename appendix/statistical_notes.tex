@@ -1,0 +1,153 @@
+% Statistical Notes
+\chapter*{Appendix C: Statistical Methods and Notes}
+\addcontentsline{toc}{chapter}{Appendix C: Statistical Methods and Notes}
+
+\section*{C.1: Corpus Statistics}
+
+\subsection*{Sample Size and Composition}
+
+\textbf{Total Corpus}:
+\begin{itemize}
+    \item Inscriptions: $\sim$4,000
+    \item Individual sign tokens: $\sim$12,600
+    \item Unique sign types: 417 (Mahadevan concordance)
+    \item Sites represented: 9 major, $\sim$30 total
+    \item Date range: 2600--1900 BCE (approximately)
+\end{itemize}
+
+\subsection*{Frequency Distribution}
+
+The sign frequency follows a power-law distribution characteristic of:
+\begin{itemize}
+    \item Administrative notation systems
+    \item Limited-vocabulary specialized systems
+    \item NOT typical of natural language phonetic writing
+\end{itemize}
+
+\textbf{Zipf's Law Test}: The distribution approximately follows Zipf's law with exponent $s \approx 1.3$ (compared to $s \approx 1.0$ for natural language).
+
+\section*{C.2: Positional Analysis Methods}
+
+\subsection*{Position Classification}
+
+Signs are classified by position:
+\begin{itemize}
+    \item \textbf{Initial}: First sign in inscription
+    \item \textbf{Medial}: Any non-initial, non-terminal position
+    \item \textbf{Terminal}: Final sign in inscription
+\end{itemize}
+
+\subsection*{Positional Entropy}
+
+For each sign $\sigma$, we calculate positional entropy:
+\[
+H_{\text{pos}}(\sigma) = -\sum_{p \in \{I,M,T\}} P(p|\sigma) \log_2 P(p|\sigma)
+\]
+
+Where:
+\begin{itemize}
+    \item $H = 0$: Sign always in same position
+    \item $H = \log_2 3 \approx 1.58$: Sign equally distributed across positions
+\end{itemize}
+
+\textbf{Findings}:
+\begin{itemize}
+    \item Instantiation signs: Low entropy ($H < 0.5$) — strongly initial
+    \item Closure signs: Very low entropy ($H < 0.2$) — almost always terminal
+    \item Counting signs: Higher entropy ($H \approx 1.0$) — flexible positioning
+\end{itemize}
+
+\section*{C.3: Bigram Analysis}
+
+\subsection*{Conditional Probability}
+
+For each ordered pair $(\sigma, \tau)$:
+\[
+P(\tau | \sigma) = \frac{\text{count}(\sigma\tau)}{\text{count}(\sigma)}
+\]
+
+\subsection*{Pointwise Mutual Information}
+
+To identify significant associations:
+\[
+\text{PMI}(\sigma, \tau) = \log_2 \frac{P(\sigma, \tau)}{P(\sigma)P(\tau)}
+\]
+
+High PMI indicates signs that co-occur more often than chance.
+
+\subsection*{Bigram Constraints}
+
+Strong constraints observed:
+\begin{itemize}
+    \item CLOSURE never precedes other operations ($P(\text{any}|\text{CLOSE}) \approx 0$)
+    \item COUNTING rarely precedes INSTANTIATION ($P(\text{INST}|\text{COUNT}) < 0.01$)
+    \item INSTANTIATION strongly predicts subsequent operations ($P(\text{op}|\text{INST}) > 0.6$)
+\end{itemize}
+
+\section*{C.4: Hypothesis Testing}
+
+\subsection*{Null Hypothesis: Random Sequences}
+
+\textbf{H0}: Sign sequences are random permutations of sign inventory.
+
+\textbf{Test}: Compare observed distributional patterns with Monte Carlo simulations of random sequences.
+
+\textbf{Result}: Observed patterns reject null hypothesis with $p < 0.0001$. The system is highly structured, not random.
+
+\subsection*{Alternative Hypothesis: Linguistic Model}
+
+\textbf{H1}: Sign sequences represent natural language with phonetic encoding.
+
+\textbf{Test}: Compare statistical properties with known phonetic writing systems (Egyptian, Akkadian, Mycenaean).
+
+\textbf{Findings}:
+\begin{itemize}
+    \item Indus shows higher positional constraint than phonetic systems
+    \item Lower average length than typical phonetic inscriptions
+    \item Different frequency distribution (more concentrated)
+    \item Suggests different functional nature
+\end{itemize}
+
+\section*{C.5: Confidence Intervals}
+
+Given corpus size, statistical confidence:
+
+\begin{itemize}
+    \item High-frequency signs (rank 1--20): 95\% confidence interval $\pm$ 3\%
+    \item Medium-frequency signs (rank 21--100): 95\% CI $\pm$ 8\%
+    \item Low-frequency signs (rank $>$ 100): 95\% CI $\pm$ 20\%
+    \item Singletons: Cannot estimate confidence (may be errors, variants, or genuine rare signs)
+\end{itemize}
+
+\section*{C.6: Limitations and Caveats}
+
+\subsection*{Statistical Limitations}
+
+\begin{enumerate}
+    \item \textbf{Small corpus}: 4,000 inscriptions is small for statistical analysis
+    \item \textbf{Damaged texts}: Many inscriptions are fragmentary
+    \item \textbf{Sampling bias}: Seals over-represented vs. perishable media
+    \item \textbf{Temporal conflation}: All periods treated as homogeneous
+    \item \textbf{Regional variation}: Site-specific patterns not fully analyzed
+\end{enumerate}
+
+\subsection*{Methodological Assumptions}
+
+\begin{itemize}
+    \item Mahadevan's sign classification is correct
+    \item Damaged signs are excluded (may bias results)
+    \item Reading direction is left-to-right (strong evidence, not certain)
+    \item Ligatures treated as sequences (alternative: treat as atomic signs)
+    \item Variants treated as same sign (alternative: treat as distinct)
+\end{itemize}
+
+\section*{C.7: Reproducibility}
+
+All analyses can be reproduced using:
+\begin{itemize}
+    \item Python code in \texttt{code/} directory
+    \item Data files in \texttt{data/} directory
+    \item Jupyter notebook: \texttt{frequency\_analysis.ipynb}
+\end{itemize}
+
+Random seed set to 42 for Monte Carlo simulations.

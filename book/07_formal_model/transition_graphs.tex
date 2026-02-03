@@ -1,0 +1,104 @@
+% Transition Graphs
+\section{State Transition Graphs}
+
+\subsection{Graphical Representation}
+
+The operational system can be visualized as a directed graph:
+
+\subsubsection{Graph Definition}
+\[
+G = (V, E)
+\]
+where:
+\begin{itemize}
+    \item $V = Q$ (vertices are states)
+    \item $E \subseteq Q \times \Sigma \times Q$ (labeled edges are transitions)
+\end{itemize}
+
+\subsection{Primary Transition Graph}
+
+\subsubsection{States}
+\begin{itemize}
+    \item $q_0$: Initial (empty inscription)
+    \item $q_1$: Instantiated (entity present)
+    \item $q_2$: Counted (quantity specified)
+    \item $q_3$: Related (relation established)
+    \item $q_4$: Qualified (attributes added)
+    \item $q_5$: Closed (validation complete) [accepting]
+\end{itemize}
+
+\subsubsection{Major Transitions}
+\begin{align*}
+q_0 &\xrightarrow{\text{INST}} q_1 \\
+q_1 &\xrightarrow{\text{COUNT}} q_2 \\
+q_1 &\xrightarrow{\text{REL}} q_3 \\
+q_1 &\xrightarrow{\text{QUAL}} q_4 \\
+q_1 &\xrightarrow{\text{CLOSE}} q_5 \\
+q_2 &\xrightarrow{\text{CLOSE}} q_5 \\
+q_3 &\xrightarrow{\text{CLOSE}} q_5 \\
+q_4 &\xrightarrow{\text{CLOSE}} q_5
+\end{align*}
+
+\subsection{Reachability Analysis}
+
+\subsubsection{Reachable States}
+All states $q_1$ through $q_5$ are reachable from $q_0$.
+
+\subsubsection{Accepting States}
+States from which acceptance is possible:
+\[
+\text{Reachable}(F) = \{q_1, q_2, q_3, q_4, q_5\}
+\]
+
+Most states can either close immediately or continue with operations.
+
+\subsection{Subgraph Analysis}
+
+\subsubsection{Strongly Connected Components}
+The graph is acyclic (no SCCs except individual vertices), confirming:
+\begin{itemize}
+    \item No recursive structures
+    \item No loops or repetition of state sequences
+    \item Linear progression through inscription
+\end{itemize}
+
+\subsection{Path Enumeration}
+
+\subsubsection{Simple Paths}
+Major paths from $q_0$ to accepting states:
+\begin{enumerate}
+    \item $q_0 \rightarrow q_1$ (entity alone)
+    \item $q_0 \rightarrow q_1 \rightarrow q_2$ (entity + count)
+    \item $q_0 \rightarrow q_1 \rightarrow q_5$ (entity + closure)
+    \item $q_0 \rightarrow q_1 \rightarrow q_2 \rightarrow q_5$ (entity + count + closure)
+\end{enumerate}
+
+\subsubsection{Complex Paths}
+Including qualifications and relations:
+\begin{itemize}
+    \item $q_0 \rightarrow q_1 \rightarrow q_4 \rightarrow q_5$ (qualified entity)
+    \item $q_0 \rightarrow q_1 \rightarrow q_3 \rightarrow q_5$ (related entity)
+    \item Multiple operations before closure
+\end{itemize}
+
+\subsection{Graph Properties}
+
+\subsubsection{Structural Characteristics}
+\begin{itemize}
+    \item DAG (Directed Acyclic Graph)
+    \item Single source ($q_0$)
+    \item Multiple sinks (accepting states)
+    \item Bounded path length (by state count)
+\end{itemize}
+
+\subsection{Visualization}
+
+A standard graphical representation would show:
+\begin{itemize}
+    \item Circles for states
+    \item Arrows for transitions (labeled with sign types)
+    \item Double circles for accepting states
+    \item Initial state marked with incoming arrow
+\end{itemize}
+
+This visualization makes the operational structure immediately apparent.

@@ -1,0 +1,101 @@
+% Proofs of Scope and Limitations
+\section{Proofs of Scope and Limitations}
+
+\subsection{Expressiveness Bounds}
+
+\subsubsection{Theorem: Computational Power}
+The Indus operational system has computational power equivalent to a deterministic finite automaton (DFA).
+
+\textbf{Proof}:
+\begin{enumerate}
+    \item The system can be modeled as a DFA (construction shown in previous chapters)
+    \item All attested inscriptions are recognized by this DFA
+    \item No inscription requires greater computational power
+    \item Therefore, the system is DFA-equivalent $\square$
+\end{enumerate}
+
+\subsection{Non-Expressibility Results}
+
+\subsubsection{Theorem: No Context-Free Power}
+The Indus system cannot express context-free languages.
+
+\textbf{Proof}: Context-free languages require a pushdown automaton (PDA) with stack memory. The Indus system:
+\begin{itemize}
+    \item Has no nested structures (no stack)
+    \item Shows no center-embedded patterns
+    \item Exhibits no counting beyond finite bounds
+    \item Therefore cannot be context-free $\square$
+\end{itemize}
+
+\subsubsection{Theorem: No Recursion}
+The Indus system cannot express recursive structures.
+
+\textbf{Proof}: Recursion requires:
+\begin{itemize}
+    \item Unbounded nesting depth, OR
+    \item Self-referential rules
+\end{itemize}
+
+The Indus system exhibits:
+\begin{itemize}
+    \item Bounded inscription length
+    \item Acyclic state graph (no cycles, no self-reference)
+    \item Fixed maximum nesting (qualification depth)
+    \item Therefore no recursion $\square$
+\end{itemize}
+
+\subsection{Positive Capabilities}
+
+\subsubsection{Theorem: Regular Language Recognition}
+The Indus system can recognize all patterns expressible as regular expressions.
+
+\textbf{Proof}: By equivalence of DFA and regular expressions (Kleene's theorem), if the system is DFA-equivalent, it can recognize any regular language within its alphabet $\square$
+
+\subsection{Cardinality Bounds}
+
+\subsubsection{Theorem: Finite Language}
+The set of all possible valid Indus inscriptions is finite.
+
+\textbf{Proof}:
+\begin{itemize}
+    \item Alphabet $\Sigma$ is finite ($|\Sigma| \approx 417$)
+    \item Maximum inscription length is bounded ($L_{\max} \approx 12$)
+    \item Total possible inscriptions $\leq |\Sigma|^{L_{\max}}$
+    \item This is finite $\square$
+\end{itemize}
+
+\subsection{Decidability Results}
+
+\subsubsection{Theorem: Membership Decidability}
+For any string $w$, we can decide in linear time whether $w$ is a valid inscription.
+
+\textbf{Proof}: DFA recognition is $O(|w|)$. For each sign, perform one state transition. After $|w|$ steps, check if current state is accepting $\square$
+
+\subsubsection{Theorem: Equivalence Decidability}
+We can decide whether two inscriptions are equivalent under the operational model.
+
+\textbf{Proof}: Two inscriptions are equivalent if they:
+\begin{enumerate}
+    \item Reach the same final state
+    \item Perform the same sequence of operations
+\end{enumerate}
+Both properties are decidable by trace comparison $\square$
+
+\subsection{Incompleteness Results}
+
+\subsubsection{Theorem: Semantic Incompleteness}
+The operational model cannot determine semantic content beyond functional categories.
+
+\textbf{Statement}: This is not a proof but an observation: without bilingual texts or phonetic values, semantic interpretation is underdetermined by operational structure alone.
+
+\subsection{Implications}
+
+These formal results establish:
+\begin{enumerate}
+    \item The system's computational limits (DFA-level)
+    \item What cannot be expressed (context-free structures, recursion)
+    \item What can be effectively decided (validity, equivalence)
+    \item The boundaries of formal analysis (operations, not semantics)
+\end{enumerate}
+
+These proofs validate the operational interpretation while acknowledging its inherent limitations.

@@ -1,0 +1,13 @@
+sign_id,mahadevan_number,wells_number,description,frequency,initial_position,medial_position,terminal_position
+1,M001,W001,Single vertical stroke,1247,0.15,0.45,0.40
+2,M002,W002,Double vertical stroke,892,0.12,0.48,0.40
+3,M003,W003,Triple vertical stroke,634,0.10,0.50,0.40
+4,M328,W328,Unit stroke,1567,0.08,0.62,0.30
+5,M329,W329,Double stroke,1123,0.06,0.64,0.30
+6,M346,W346,Jar sign basic,756,0.35,0.45,0.20
+7,M361,W361,Fish sign basic,892,0.58,0.32,0.10
+8,M411,W411,Enclosure terminal,423,0.01,0.04,0.95
+9,M412,W412,Roof terminal,356,0.02,0.03,0.95
+# Additional signs would continue...
+# This is a representative sample of the complete sign list
+# Full dataset would include all 417 Mahadevan concordance signs
