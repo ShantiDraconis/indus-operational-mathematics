@@ -59,6 +59,120 @@ env/
 ENV/
 env.bak/
 venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# C++
+*.o
+*.obj
+*.exe
+*.out
+*.i*86
+*.x86_64
+*.hex
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.ilk
+*.gch
+*.pch
+*.so.*
+*.dylib
+*.dll
+*.mod
+*.smod
+*.lai
+*.la
+*.a
+*.lib
+*.exp
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+!formal/coq/Makefile
+!cpp/Makefile
+
+# LaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.alg
+*.loa
+acs-*.bib
+*.thm
+*.nav
+*.pre
+*.snm
+*.vrb
+*.soc
+*.cut
+*.cpt
+*.spl
+*.ent
+*.lox
+*.mf
+*.mp
+*.t[1-9]
+*.t[1-9][0-9]
+*.tfm
+*.[1-9]
+*.[1-9][0-9]
+*.end
+*.?end
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_checkpoints/
 
 # IDEs
 .vscode/
@@ -70,6 +184,23 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
+.DS_Store
+
+# Proof assistants intermediate files
+*.vo
+*.vok
+*.vos
+*.glob
+.lia.cache
+.nia.cache
+*.lean.json
+.lake/
+
+# Generated outputs
+code/outputs/
+book/figures/generated/
+*.pdf
+!book/main.pdf
 
 # Temporary files
 tmp/
@@ -77,6 +208,16 @@ temp/
 *.tmp
 
 # AL (Business Central) - preserved from original
+# OS specific
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Node modules (if any JS tooling)
+node_modules/
+package-lock.json
+yarn.lock
+#Cache folder
 .alcache/
 .alpackages/
 .snapshots/
@@ -86,3 +227,131 @@ rad.json
 *.g.xlf
 *.flf
 TestResults.xml
+#Test results file
+TestResults.xml
+
+# Python
+### Python ###
+__pycache__/
+*.pyc
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+### LaTeX ###
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.synctex.gz
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+### Generated outputs ###
+symbol_network.json
+# PyTest
+.pytest_cache/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+MANIFEST
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.log
+
+### Project specific ###
+output/*.png
+output/*.pdf
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.env
+.venv
+env/
+venv/
+
+### C++ ###
+*.o
+*.obj
+*.exe
+*.out
+*.app
+example
+a.out
+
+### IDE ###
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store

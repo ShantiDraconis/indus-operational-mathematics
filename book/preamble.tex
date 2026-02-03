@@ -1,0 +1,182 @@
+% Preamble for Indus Operational Mathematics Book
+% All package imports and custom commands
+
+% ============================================================================
+% Core Packages
+% ============================================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% ============================================================================
+% Mathematics
+% ============================================================================
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{stmaryrd}  % For semantic brackets
+
+% ============================================================================
+% Graphics and Diagrams
+% ============================================================================
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows,shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ============================================================================
+% Tables and Lists
+% ============================================================================
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+% ============================================================================
+% Code Listings
+% ============================================================================
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% ============================================================================
+% Hyperlinks and References
+% ============================================================================
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+
+% ============================================================================
+% Page Layout
+% ============================================================================
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=3cm,
+    right=3cm,
+    top=3cm,
+    bottom=3cm
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+
+% ============================================================================
+% Theorem Environments
+% ============================================================================
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{nonclaim}[theorem]{Non-Claim}
+
+% ============================================================================
+% Custom Commands
+% ============================================================================
+
+% Symbol system notation
+\newcommand{\sym}[1]{\mathsf{#1}}  % Symbol
+\newcommand{\symclass}[1]{\mathcal{#1}}  % Symbol class
+\newcommand{\compose}{\oplus}  % Composition operator
+\newcommand{\state}[1]{\langle #1 \rangle}  % State
+
+% Sets
+\newcommand{\Symbols}{\Sigma}
+\newcommand{\Classes}{\mathcal{C}}
+\newcommand{\States}{\Theta}
+\newcommand{\Operators}{\Omega}
+
+% Operations
+\newcommand{\eval}{\mathop{\mathrm{eval}}}
+\newcommand{\class}{\mathop{\mathrm{class}}}
+\newcommand{\layer}{\mathop{\mathrm{layer}}}
+
+% Semantic brackets
+\newcommand{\sem}[1]{\llbracket #1 \rrbracket}
+
+% Abbreviations
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\cf}{\textit{cf.}}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\vs}{\textit{vs.}}
+
+% Special symbols
+\newcommand{\TCOP}{\textsc{tcop}}
+
+% Chinese characters (requires XeLaTeX or LuaLaTeX for full support)
+% For pdflatex, we'll use transliteration
+\newcommand{\ren}{{\normalfont 人}}  % rén (person)
+\newcommand{\yi}{{\normalfont 一}}   % yī (one)
+\newcommand{\da}{{\normalfont 大}}   % dà (big)
+
+% ============================================================================
+% Bibliography Settings
+% ============================================================================
+
+\usepackage{cite}
+
+% ============================================================================
+% Miscellaneous
+% ============================================================================
+
+\usepackage{lipsum}  % For dummy text in development
+\usepackage{todonotes}  % For TODO notes during writing
+
+% Prevent orphans and widows
+\widowpenalty=10000
+\clubpenalty=10000
+
+% ============================================================================
+% End of Preamble
+% ============================================================================

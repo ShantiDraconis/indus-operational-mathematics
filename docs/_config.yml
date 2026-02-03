@@ -1,0 +1,9 @@
+theme: jekyll-theme-minimal
+title: Indus Operational Mathematics
+description: A Formal Framework for State-Based Symbol Systems
+show_downloads: true
+google_analytics: # Add if desired
+# GitHub Pages Configuration
+theme: jekyll-theme-minimal
+title: The Indus Script as an Operational System
+description: How one of the world's earliest civilizations encoded quantity, relation, and validation without language.

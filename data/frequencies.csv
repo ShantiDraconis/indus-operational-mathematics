@@ -13,3 +13,41 @@ M347,298,2.4,10,instantiation
 # Full dataset would include frequency data for all signs
 # Total corpus size approximately 12,600 sign occurrences
 # across approximately 4,000 inscriptions
+symbol_id,total_frequency,position_distribution,seal_frequency,tablet_frequency,pottery_frequency
+100,450,initial:100%,320,90,40
+101,320,initial:100%,230,70,20
+200,850,initial:100%,650,150,50
+201,620,initial:100%,480,110,30
+202,380,initial:100%,290,70,20
+250,540,initial:100%,410,100,30
+251,410,initial:100%,310,80,20
+328,680,initial:100%,520,130,30
+329,520,initial:100%,400,100,20
+330,440,initial:100%,340,80,20
+342,1200,terminal:100%,920,230,50
+343,890,terminal:100%,680,170,40
+344,670,terminal:100%,510,130,30
+345,520,terminal:100%,400,100,20
+346,410,terminal:100%,310,80,20
+347,320,terminal:100%,240,60,20
+348,250,terminal:100%,190,50,10
+373,2100,initial:100%,1600,400,100
+374,1650,initial:100%,1260,310,80
+375,1320,initial:100%,1010,250,60
+376,980,initial:100%,750,190,40
+377,870,initial:100%,660,170,40
+378,760,initial:100%,580,150,30
+379,650,initial:100%,500,120,30
+380,540,initial:100%,410,110,20
+400,730,medial:80%;terminal:20%,560,140,30
+401,610,medial:80%;terminal:20%,470,120,20
+402,520,medial:75%;terminal:25%,400,100,20
+403,450,medial:75%;terminal:25%,350,80,20
+410,920,medial:90%;initial:10%,700,180,40
+411,850,medial:90%;initial:10%,650,170,30
+412,720,medial:90%;initial:10%,550,140,30
+413,610,medial:90%;initial:10%,470,120,20
+414,490,medial:85%;initial:15%,380,90,20
+415,380,medial:85%;initial:15%,290,70,20
+416,270,medial:80%;initial:20%,210,50,10
+417,160,medial:80%;initial:20%,120,30,10

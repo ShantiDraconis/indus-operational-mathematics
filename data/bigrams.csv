@@ -12,3 +12,29 @@ M361,M001,67,0.08,fish_followed_by_single_vertical
 # Bigram analysis showing most common two-sign sequences
 # Full dataset would include all attested bigrams
 # This provides evidence for sequential constraints and operational patterns
+symbol1,symbol2,frequency,context,position
+373,342,450,administrative_basic,entity_closure
+373,343,380,administrative_confirmed,entity_closure
+373,346,290,administrative_absolute,entity_closure
+373,410,520,administrative_counted,entity_quantifier
+373,411,410,administrative_double,entity_quantifier
+373,400,330,administrative_paired,entity_relation
+200,342,280,animal_unicorn_basic,entity_closure
+200,343,230,animal_unicorn_confirmed,entity_closure
+200,410,310,animal_unicorn_counted,entity_quantifier
+201,342,210,animal_bull_basic,entity_closure
+328,342,240,container_basic,entity_closure
+328,410,190,container_counted,entity_quantifier
+250,346,170,authority_absolute,entity_closure
+410,342,380,count_closed,quantifier_closure
+410,343,290,count_confirmed,quantifier_closure
+411,342,310,double_closed,quantifier_closure
+412,343,240,triple_confirmed,quantifier_closure
+400,342,220,relation_closed,relation_closure
+400,343,180,relation_confirmed,relation_closure
+401,346,150,sequence_absolute,relation_closure
+410,411,280,count_sequence,quantifier_quantifier
+411,412,210,count_progression,quantifier_quantifier
+373,410,411,entity_count_double,entity_quant_quant
+373,400,342,entity_relation_closure,entity_rel_close
+200,410,343,animal_count_confirmed,entity_quant_close
