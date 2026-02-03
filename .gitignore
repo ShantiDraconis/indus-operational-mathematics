@@ -67,6 +67,8 @@ cmake_install.cmake
 Makefile
 *.cmake
 !CMakeLists.txt
+!formal/coq/Makefile
+!cpp/Makefile
 
 # LaTeX
 *.aux

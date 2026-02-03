@@ -1,0 +1,5 @@
+session IndusOperationalMathematics = HOL +
+  options [timeout = 300]
+  theories
+    IndusOperationalMathematics
+    IndusInvariance

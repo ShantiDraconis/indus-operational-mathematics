@@ -28,6 +28,11 @@ class Symbol:
     def __hash__(self):
         return hash(self.id)
 
+    def __eq__(self, other):
+        if not isinstance(other, Symbol):
+            return NotImplemented
+        return self.id == other.id
+
 
 @dataclass
 class State:

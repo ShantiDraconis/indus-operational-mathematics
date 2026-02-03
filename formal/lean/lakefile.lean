@@ -1,10 +1,13 @@
-name = "IndusOperationalMathematics"
-version = "0.1.0"
-keywords = ["indus", "operational-mathematics", "formal-verification"]
-authors = ["Draconis"]
+import Lake
+open Lake DSL
 
-[dependencies]
-mathlib = { git = "https://github.com/leanprover-community/mathlib4", rev = "master" }
+package «IndusOperationalMathematics» where
+  version := v!"0.1.0"
 
-[[lean_lib]]
-name = "IndusOperationalMathematics"
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4"
+
+@[default_target]
+lean_lib «IndusOperationalMathematics» where
+  -- add library configuration options here
+
