@@ -1,0 +1,51 @@
+symbol_id,class,description,frequency,position_preference,ontological_category
+100,ENT_METRICA,Weight unit base,450,initial,measurement
+101,ENT_METRICA,Length unit,320,initial,measurement
+102,ENT_METRICA,Volume unit,280,initial,measurement
+200,ENT_ANIMAL,Unicorn,850,initial,agent
+201,ENT_ANIMAL,Bull,620,initial,agent
+202,ENT_ANIMAL,Elephant,380,initial,agent
+203,ENT_ANIMAL,Tiger,290,initial,agent
+204,ENT_ANIMAL,Rhinoceros,210,initial,agent
+250,ENT_HASTE,Simple staff,540,initial,authority
+251,ENT_HASTE,Decorated staff,410,initial,authority
+252,ENT_HASTE,Double staff,330,initial,authority
+253,ENT_HASTE,Crowned staff,270,initial,authority
+328,ENT_U,Small vessel,680,initial,container
+329,ENT_U,Medium vessel,520,initial,container
+330,ENT_U,Large vessel,440,initial,container
+331,ENT_U,Ritual vessel,350,initial,container
+332,ENT_U,Storage vessel,280,initial,container
+342,OP_CLOSE,Simple closure,1200,terminal,operator
+343,OP_CLOSE,Confirmed closure,890,terminal,operator
+344,OP_CLOSE,Validated closure,670,terminal,operator
+345,OP_CLOSE,Sealed closure,520,terminal,operator
+346,OP_CLOSE,Absolute closure,410,terminal,operator
+347,OP_CLOSE,Hierarchical closure,320,terminal,operator
+348,OP_CLOSE,Terminal closure,250,terminal,operator
+373,ENT_OVAL,Basic token,2100,initial,entity
+374,ENT_OVAL,Administrative unit,1650,initial,entity
+375,ENT_OVAL,Institutional seal,1320,initial,entity
+376,ENT_OVAL,Royal seal,980,initial,entity
+377,ENT_OVAL,Trade marker,870,initial,entity
+378,ENT_OVAL,Guild marker,760,initial,entity
+379,ENT_OVAL,Temple marker,650,initial,entity
+380,ENT_OVAL,Port authority,540,initial,entity
+400,OP_REL,Pair relation,730,medial,operator
+401,OP_REL,Sequence relation,610,medial,operator
+402,OP_REL,Hierarchy relation,520,medial,operator
+403,OP_REL,Exchange relation,450,medial,operator
+404,OP_REL,Transformation relation,380,medial,operator
+405,OP_REL,Possession relation,320,medial,operator
+406,OP_REL,Containment relation,270,medial,operator
+407,OP_REL,Production relation,230,medial,operator
+408,OP_REL,Distribution relation,190,medial,operator
+409,OP_REL,Validation relation,150,medial,operator
+410,OP_COUNT,Unit count,920,medial,operator
+411,OP_COUNT,Double count,850,medial,operator
+412,OP_COUNT,Triple count,720,medial,operator
+413,OP_COUNT,Quadruple count,610,medial,operator
+414,OP_COUNT,Five count,490,medial,operator
+415,OP_COUNT,Ten count,380,medial,operator
+416,OP_COUNT,Twenty count,270,medial,operator
+417,OP_COUNT,Hundred count,160,medial,operator

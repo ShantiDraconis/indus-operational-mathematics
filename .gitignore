@@ -192,6 +192,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+### Python ###
 __pycache__/
 *.pyc
 
@@ -237,7 +239,22 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.egg
 
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
 ### Generated outputs ###
 symbol_network.json
 # PyTest
@@ -247,6 +264,18 @@ symbol_network.json
 venv/
 ENV/
 env/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 MANIFEST
 .pytest_cache/
 .coverage

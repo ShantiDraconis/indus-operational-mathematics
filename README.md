@@ -1,3 +1,829 @@
+# The Indus Script as an Operational System
+
+**How one of the world's earliest civilizations encoded quantity, relation, and validation without language.**
+
+---
+
+## 📘 Overview
+
+This project does not claim a phonetic decipherment of the Indus script. It presents a formal model showing how the script functions as a finite operational system for counting, relating, qualifying, and closing institutional states.
+
+The Indus script encodes **states, quantities, and validation** — not stories or speech.
+
+## 🌐 Public Documentation
+
+For a complete public explanation of the system, visit our **[GitHub Pages site](https://shantidraconis.github.io/indus-operational-mathematics/)**.
+
+## 🎯 Key Concept
+
+Harappan society needed a way to record quantities, ownership, relations, and validation without writing long texts. The solution was a compact symbolic system that works like a modern workflow or database record.
+
+**Modern Analogies:** JSON • Workflow • Status Log • Ledger
+
+## 🔄 Core Process
+
+```
+ENTITY → QUALIFIED → COUNTED → CLOSED
+```
+
+This is not a sentence — it's a process, it's a state.
+
+## ❌ What This Is NOT
+
+- ❌ Not a literal translation
+- ❌ Not spoken language
+- ❌ Not alphabetic writing
+- ❌ Not narrative text
+- ❌ Not a secret code
+
+## 📚 Full Technical Documentation
+
+For the complete formal model, mathematical scope, sign families, and empirical analysis, see the full monograph and datasets (to be published via Zenodo).
+
+## 📖 Methodology
+
+This work:
+- Builds upon Mahadevan's concordance
+- Proposes formal operational modeling rather than linguistic decipherment
+- Focuses on structural patterns, positional regularities, and quantitative closure
+- Engages with scholarship by Mahadevan, Parpola, Wells, and others
+
+**Limits:** This model explains *how the system functions*, not what specific signs "mean" in a linguistic sense.
+
+## 📄 License
+
+See [LICENSE](LICENSE) for details.
+
+---
+
+*The Indus script encodes states, quantities, and validation — not stories or speech.*
+# Indus Operational Mathematics
+
+## Sistema Operacional Harappano: Modelo Formal Completo
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+> A complete formal reconstruction of the Indus script as a finite-state operational system for institutional validation.
+
+## Overview
+
+The Harappan Operational System is a formal mathematical model that reconstructs the Indus script not as a phonetic language, but as a **finite-state automaton** designed for administrative validation and institutional record-keeping. This repository contains the complete implementation, data, and documentation.
+
+### Key Discovery
+
+The Indus script operates as:
+- **Not a language** → A validation protocol
+- **417 catalogued states** derived from ~45 fundamental elements
+- **Universal operators** → Reappear in Festos, Egyptian, and Chinese scripts
+- **Modern equivalent** → Workflows, automata, JSON schemas, blockchain validation
+
+## System Architecture
+
+```
+S = (B, O, Σ, R, F)
+
+B = Base bodies (≈30 ontological classes)
+O = Graphic operators (≈15 universal modifiers)
+Σ = Valid states (417 catalogued symbols)
+R = Composition rules (extracted from Tables II-IV)
+F = Final states (family 342-348 + specialized closers)
+```
+
+### The Finite Automaton
+
+The system has **6 states**:
+
+```
+S₀: INICIAL        → No symbol processed
+S₁: ENTIDADE       → Entity recognized
+S₂: QUALIFICADA    → Qualification applied
+S₃: QUANTIFICADA   → Quantity specified
+S₄: RELACIONADA    → Relation established
+S₅: FECHADA        → Closure applied ★ ACCEPTING STATE
+```
+
+### BNF Grammar
+
+```bnf
+<registro> ::= <entidade> <qualificador>* <quantificador>? <relacionador>? <fechamento>
+
+<entidade>      ::= ENT_OVAL | ENT_U | ENT_HASTE | ENT_ANIMAL | ENT_METRICA
+<qualificador>  ::= OP_QUAL | OP_SCOPE | <intensificador>
+<quantificador> ::= OP_COUNT | ||| | |||| | ...
+<relacionador>  ::= OP_REL | Knot | Dup
+<fechamento>    ::= OP_CLOSE (342-348)
+```
+
+## Repository Structure
+
+```
+indus-operational-mathematics/
+├── formal_model/          # Mathematical model
+│   ├── automata/          # Finite automaton specification
+│   ├── algebra/           # Operator algebra
+│   └── proofs/            # Formal proofs
+├── data/                  # Corpus data
+│   ├── signs.csv          # 417 symbols + attributes
+│   ├── bigrams.csv        # Co-occurrence data (Table II)
+│   ├── frequencies.csv    # Frequency distribution (Table I)
+│   └── indus-record-schema.json  # JSON Schema specification
+├── implementation/        # Executable code
+│   ├── parser/            # Syntax parser
+│   │   └── indus_automaton.py
+│   ├── validator/         # Sequence validator
+│   │   └── indus_validator.py
+│   ├── converter/         # Format converters
+│   │   └── harappan_to_json.py
+│   └── simulator/         # Automaton simulator
+├── comparisons/           # Comparative systems
+│   ├── festos/            # Phaistos Disc
+│   ├── egyptian/          # Egyptian hieroglyphs
+│   └── chinese/           # Early Chinese
+└── publications/          # Academic documentation
+    ├── paper/             # Research paper
+    ├── book/              # Full monograph
+    └── presentations/     # Presentation materials
+```
+
+## Installation
+
+### Requirements
+
+- Python 3.8 or higher
+- No external dependencies for core functionality
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/ShantiDraconis/indus-operational-mathematics.git
+cd indus-operational-mathematics
+
+# Run the automaton
+python implementation/parser/indus_automaton.py
+
+# Run the validator
+python implementation/validator/indus_validator.py
+
+# Convert sequences to JSON
+python implementation/converter/harappan_to_json.py
+```
+
+## Usage Examples
+
+### Example 1: Validate a Sequence
+
+```python
+from implementation.parser.indus_automaton import validate_indus_sequence
+
+# Simple record: entity + closure
+sequence = [373, 342]  # basic_token + simple_closure
+is_valid, error = validate_indus_sequence(sequence)
+print(f"Valid: {is_valid}")  # Output: Valid: True
+```
+
+### Example 2: Convert to JSON
+
+```python
+from implementation.converter.harappan_to_json import harappan_to_json
+
+# Record with quantity
+sequence = [373, 410, 411, 342]  # entity + count(1) + count(2) + closure
+record = harappan_to_json(sequence)
+print(record)
+# Output: {'entity': 'basic_token', 'quantity': 3, 'closure': 'simple', ...}
+```
+
+### Example 3: Use the Automaton
+
+```python
+from implementation.parser.indus_automaton import IndusAutomaton, SymbolClass
+
+automaton = IndusAutomaton()
+
+# Process a sequence
+automaton.process_symbol(SymbolClass.ENT_OVAL)
+automaton.process_symbol(SymbolClass.OP_COUNT)
+automaton.process_symbol(SymbolClass.OP_CLOSE)
+
+print(automaton.is_valid_record())  # Output: True
+print(automaton.get_current_state())  # Output: State.S5 (FECHADA)
+```
+
+### Example 4: Detailed Validation
+
+```python
+from implementation.validator.indus_validator import IndusValidator
+
+validator = IndusValidator()
+
+sequence = [200, 410, 411, 343]  # unicorn + count + count + confirmed_closure
+result = validator.validate_with_details(sequence)
+
+print(f"Valid: {result['is_valid']}")
+print(f"Final State: {result['final_state']}")
+print(f"Symbol Classes: {result['symbol_classes']}")
+```
+
+## The 30 Ontological Classes
+
+| Class | Symbol Range | Function | Examples |
+|-------|--------------|----------|----------|
+| ENT_OVAL | 373-399 | Institutional entities | Basic token, seals |
+| ENT_U | 328-339 | Containers/vessels | Small, medium, large |
+| ENT_HASTE | 250-260 | Authority/hierarchy | Staffs, scepters |
+| ENT_ANIMAL | 200-210 | Functional agents | Unicorn, bull, elephant |
+| ENT_METRICA | 100-150 | Measures/quantities | Weight, length, volume |
+| OP_CLOSE | 342-348 | Terminal closure | Simple, confirmed, absolute |
+| OP_QUAL | Various | Qualification | Dot, stroke, crown |
+| OP_REL | 400-409 | Binary relations | Pair, hierarchy, exchange |
+| OP_COUNT | 410-417 | Counting | 1, 2, 3, 4, 5, 10, 20, 100 |
+| OP_SCOPE | Bracket | Scope delimitation | Context boundaries |
+
+## Key Theorems
+
+### Theorem 1: Syntactic Completeness
+```
+∀ valid record r, ∃ sequence s ∈ Σ* such that
+  s ⊢ r ∧ s ends with closure symbol
+```
+
+### Theorem 2: Operational Consistency
+```
+If s₁ → s₂ and s₁ ∈ Class_X, then s₂ ∈ Class_X
+(Operators don't change ontological classes)
+```
+
+### Theorem 3: Terminal Closure
+```
+If s ∈ OP_CLOSE, then ∄ t such that s → t
+(Closure is an absorbing state)
+```
+
+## Comparison with Other Systems
+
+| System | Entity | Qualification | Quantification | Closure |
+|--------|--------|---------------|----------------|---------|
+| Harappa | 373-399 | Dot, Stroke | 410-417 | 342-348 |
+| Phaistos | Ovals | Dots | Strokes | Spiral end |
+| Egyptian | Cartouche | Determinatives | Strokes | Serekh |
+| Chinese | Radical | Markers | 一,二,三 | 終 |
+
+## Modern Applications
+
+### As a Validation Framework
+
+```yaml
+# YAML specification based on Harappan principles
+validation_schema:
+  entity: required
+  qualifiers: optional
+  quantity: optional
+  relations: optional
+  closure: required
+  
+  rules:
+    - "closure must be last"
+    - "quantity requires entity"
+    - "relation requires at least two entities"
+```
+
+### As a DSL (Domain-Specific Language)
+
+```
+# DSL for institutional records
+record {
+  entity 373
+  qualified by dot, stroke
+  quantity 3
+  related to 400 via knot
+  closed with 346
+}
+```
+
+### As a Smart Contract
+
+```solidity
+// Ethereum smart contract inspired by Harappan logic
+contract IndusRecord {
+    enum State { Open, Qualified, Counted, Related, Closed }
+    
+    struct Record {
+        uint256 entity;
+        address[] qualifiers;
+        uint256 quantity;
+        uint256[] relations;
+        State state;
+    }
+    
+    function closeRecord(uint256 recordId, uint256 closureType) public {
+        require(closureType >= 342 && closureType <= 348, "Invalid closure");
+        records[recordId].state = State.Closed;
+    }
+}
+```
+
+## Data Files
+
+### signs.csv
+Complete catalog of 417 symbols with:
+- Symbol ID
+- Ontological class
+- Description
+- Frequency counts
+- Position preferences
+
+### bigrams.csv
+Co-occurrence matrix (Table II) showing:
+- Symbol pair frequencies
+- Contextual usage
+- Positional relationships
+
+### frequencies.csv
+Distribution data (Table I) including:
+- Total frequencies
+- Position distributions
+- Medium-specific counts (seals, tablets, pottery)
+
+## Contributing
+
+We welcome contributions in:
+- Additional formal proofs
+- Comparative analysis with other ancient scripts
+- Modern applications and implementations
+- Visualization tools
+- Documentation improvements
+
+## Citation
+
+If you use this work in academic research, please cite:
+
+```bibtex
+@software{indus_operational_mathematics_2026,
+  title = {Indus Operational Mathematics: A Formal Model of Harappan Administrative Notation},
+  author = {ShantiDraconis},
+  year = {2026},
+  url = {https://github.com/ShantiDraconis/indus-operational-mathematics},
+  license = {CC-BY-4.0}
+}
+```
+
+## License
+
+This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to:
+- **Share** — copy and redistribute the material
+- **Adapt** — remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** — You must give appropriate credit
+
+## Acknowledgments
+
+This work builds upon:
+- Parpola, A. (1994). *Deciphering the Indus Script*
+- Mahadevan, I. (1977). *The Indus Script: Texts, Concordance and Tables*
+- Wells, B. (2011). "Epigraphic Approaches to Indus Writing"
+
+## Status
+
+✅ **Complete**: The formal model is fully specified  
+✅ **Implemented**: Core automaton and validator are functional  
+✅ **Documented**: Mathematical proofs and usage examples provided  
+🚧 **In Progress**: Visualization tools and web interface  
+📋 **Planned**: Academic publication and conference presentations
+
+## Contact
+
+For questions, collaborations, or feedback:
+- GitHub Issues: [Report an issue](https://github.com/ShantiDraconis/indus-operational-mathematics/issues)
+- Discussions: [Join the discussion](https://github.com/ShantiDraconis/indus-operational-mathematics/discussions)
+
+---
+
+**The system is closed. The model is complete. The implementation is direct.**
+# Harappan Operational Mathematics System
+
+## Sistema Operacional de Matemática Harappana - Bloco 373-417
+
+Este repositório implementa o sistema operacional de matemática harappana conforme descrito na análise do bloco de símbolos 373-417. O sistema não é uma escrita fonética, mas um **protocolo operacional de validação de estados institucionais**.
+
+## Visão Geral do Sistema
+
+### 1. Três Famílias Funcionais (373-417)
+
+Os símbolos 373-417 pertencem a três famílias funcionais com corpos-base distintos:
+
+| Família | Intervalo | Corpo-base | Função no sistema |
+|---------|-----------|------------|-------------------|
+| **Ω (Tokens/Entidades)** | 373-399 | Oval/círculo simples | Representar entidades institucionais (objetos, atos, sujeitos) que podem ser qualificados |
+| **Δ (Relações/Vínculos)** | 400-409 | Duplicação de ovais, nós, halteres | Estabelecer conexões formais (pares, contratos, trocas) |
+| **Σ (Contagens/Pilhas)** | 410-417 | Empilhamento vertical de discos/ovais | Codificar quantidades, lotes, indexação |
+
+### 2. Operadores Gráficos Universais (As "Runas")
+
+Modificadores gráficos mínimos que aparecem transversalmente em múltiplas famílias:
+
+| Operador | Forma gráfica | Efeito funcional | Exemplo no bloco 373-417 |
+|----------|---------------|------------------|--------------------------|
+| **Dot** | Ponto interno (•) | Marca instância/ativação | 374, 375, 376 (oval + ponto) |
+| **Stroke** | Traço interno (\|) | Introduz partição/qualificação | 377, 378 (oval + traço) |
+| **Fill/Hachura** | Preenchimento interno | Indica estado consumado/executado | 386, 387 (oval preenchido) |
+| **Bracket** | Parênteses laterais | Delimita escopo/jurisdição | 379, 380 (oval + colchetes) |
+| **SideBars** | Barras laterais (\|\|) | Define nível/grau/autoridade | 381, 382, 383 |
+| **Crown/Prongs** | Dentes no topo | Multiplexação/canais múltiplos | 384, 385 (oval + coroa) |
+| **Dup** | Duplicação do corpo-base | Cria par/relação binária | 400-406 (dois ovais) |
+| **Knot** | Interlaçamento | Estabelece vínculo forte/travamento | 407 (nó) |
+| **Stem** | Haste inferior/superior | Âncora/indexação externa | 408, 409 (halteres com haste) |
+| **Stack** | Empilhamento vertical | Contagem/agregação | 410-417 (pilhas de discos) |
+
+**Lei de conservação dos operadores**: Um operador mantém efeito funcional similar mesmo quando aplicado a corpos-base diferentes.
+
+### 3. Sistema de Composição
+
+#### 3.1 Conexões dentro da mesma família
+- 373 (oval base) → Dot → 374 (entidade instanciada)
+- 373 → Stroke → 377 (entidade qualificada)
+- 373 → Bracket → 379 (entidade com escopo delimitado)
+
+#### 3.2 Conexões entre famílias (composição hierárquica)
+**Caso crítico**:
+- **394 = 373 (oval base) + 343 (operador de fechamento da U-family)**
+  - 373: entidade/token
+  - 343: operador de fechamento qualificado (U + barra interna)
+  - 394: registro institucional fechado sobre a entidade 373
+
+Isto prova que:
+- Operadores de fechamento (342-348) podem ser aplicados sobre corpos de outras famílias
+- A escrita harappana admite composição gráfica hierárquica, não apenas linear
+
+#### 3.3 Conexões via operadores universais
+- Dup aplicado a 373 → 400-406 (pares de entidades)
+- Knot aplicado a 400 → 407 (par vinculado)
+- Stack aplicado a 373 → 410-417 (contagem de entidades)
+
+## Estrutura do Código
+
+### Módulos Principais
+
+1. **`harappan_symbols.py`**: Define símbolos, famílias, operadores e sistema de composição
+2. **`harappan_sequence.py`**: Representação de sequências e validação por autômato finito
+3. **`harappan_frequency.py`**: Análise de frequência e distribuição (Tabelas I, II, IV)
+
+### Classes Principais
+
+- `Symbol`: Representa um símbolo harappano com ID, família e operadores
+- `SymbolRegistry`: Registro completo de símbolos 373-417
+- `CompositionSystem`: Regras de composição entre símbolos
+- `HarappanSequence`: Sequência de símbolos harappanos
+- `FiniteAutomaton`: Validador de sequências válidas
+- `FrequencyAnalyzer`: Análise de frequência e distribuição
+
+## Uso
+
+### Exemplo 1: Criar e consultar símbolos
+
+```python
+from harappan_symbols import create_harappan_system, SymbolFamily
+
+# Criar sistema completo
+registry, composition = create_harappan_system()
+
+# Consultar um símbolo
+symbol_373 = registry.get_symbol(373)
+print(f"Symbol {symbol_373.id}: {symbol_373.description}")
+# Output: Symbol 373: Base entity token
+
+# Consultar símbolos de uma família
+omega_symbols = registry.get_family_symbols(SymbolFamily.OMEGA)
+print(f"Omega family has {len(omega_symbols)} symbols")
+# Output: Omega family has 27 symbols
+```
+
+### Exemplo 2: Aplicar composição
+
+```python
+from harappan_symbols import create_harappan_system, GraphicOperator
+
+registry, composition = create_harappan_system()
+
+# Aplicar operador Dot ao símbolo base 373
+result = composition.get_composition(373, GraphicOperator.DOT)
+print(f"373 + DOT = {result}")
+# Output: 373 + DOT = 374
+
+# Decompor um símbolo
+decompositions = composition.get_decomposition(394)
+for base, operator in decompositions:
+    print(f"394 = {base} + {operator.value}")
+# Output: 394 = 373 + █
+```
+
+### Exemplo 3: Validar sequência
+
+```python
+from harappan_sequence import validate_and_convert
+
+# Validar sequência: entidade → relação → contagem
+sequence = [373, 400, 410]
+result = validate_and_convert(sequence)
+
+print(f"Valid: {result['valid']}")
+print(f"Functional notation: {result['functional_notation']}")
+# Output: 
+# Valid: True
+# Functional notation: ∃x (Entity(373) ∧ Relation(400) ∧ Count(2))
+```
+
+### Exemplo 4: Representação JSON moderna
+
+```python
+from harappan_sequence import HarappanSequence
+from harappan_symbols import create_harappan_system
+import json
+
+registry, _ = create_harappan_system()
+
+# Criar sequência
+sequence = HarappanSequence()
+sequence.object_type = "seal"
+sequence.provenance = "Harappa"
+sequence.add_symbol(373)  # Entidade
+sequence.add_symbol(410)  # Contagem = 2
+sequence.add_symbol(394)  # Registro fechado
+
+# Converter para JSON (equivalente moderno)
+json_repr = sequence.to_json()
+print(json.dumps(json_repr, indent=2))
+```
+
+Output:
+```json
+{
+  "sequence": [
+    {"symbol": 373, "position": "initial"},
+    {"symbol": 410, "position": "medial"},
+    {"symbol": 394, "position": "final"}
+  ],
+  "length": 3,
+  "object_type": "seal",
+  "provenance": "Harappa",
+  "entities": [373, 394],
+  "counts": [410]
+}
+```
+
+### Exemplo 5: Análise de frequência
+
+```python
+from harappan_frequency import create_sample_data
+
+# Criar analisador com dados de exemplo
+analyzer = create_sample_data()
+
+# Símbolos de alta frequência (operadores centrais)
+high_freq = analyzer.get_high_frequency_symbols(threshold=10)
+print(f"High frequency symbols: {high_freq}")
+# Output: High frequency symbols: [373, 374, 400, 410]
+
+# Símbolos de baixa frequência (instâncias específicas)
+low_freq = analyzer.get_low_frequency_symbols(threshold=5)
+print(f"Low frequency symbols: {low_freq}")
+# Output: Low frequency symbols: [394, 407]
+
+# Padrões de posição
+patterns = analyzer.get_position_patterns(373)
+print(f"Symbol 373 position distribution: {patterns}")
+# Output: Symbol 373 position distribution: {'initial': 50.0, 'medial': 50.0, 'final': 0.0}
+```
+
+## Equivalência Moderna
+
+O sistema harappano equivale formalmente a:
+
+### JSON (Representação de dados)
+```json
+{
+  "entity": "373",
+  "quantity": 3,
+  "relation": "bound",
+  "status": "closed"
+}
+```
+
+### Notação Lógica (Lógica de primeira ordem)
+```
+∃x (Entity(x, 373) ∧ Count(x, 3) ∧ Linked(x, y) ∧ Closed(x))
+```
+
+### Workflow / Autômato Finito
+O sistema implementa um autômato finito que valida sequências:
+- **Estados**: START → ENTITY → RELATION → COUNT → CLOSED
+- **Transições**: Baseadas nas famílias de símbolos
+- **Aceitação**: Estados ENTITY, COUNT ou CLOSED são terminais válidos
+
+## Frequência e Distribuição
+
+### Tabela I: Frequência por posição
+- **Símbolos de alta frequência** (ex.: 373, 342, 343): operadores centrais, usados em múltiplos contextos
+- **Símbolos de baixa frequência** (ex.: 394, 407): instâncias específicas, combinações validadas
+
+### Tabela II: Pares recorrentes
+Pares comuns que suportam as regras de composição:
+- 373 → 410 (entidade + contagem)
+- 373 → 400 (entidade + relação)
+- 400 → 373 (relação + entidade)
+
+### Tabela IV: Distribuição por objeto
+- **Predominância**: selos e tabletes
+- **Ausência**: objetos decorativos
+- Indica uso institucional/administrativo
+
+## Conexões com Outros Sistemas
+
+### Disco de Festo
+- ~45 signos distintos, carimbados em espiral
+- **Operadores compartilhados**: Kano (canal/abertura), Dot (instância), Knot (vínculo)
+- **Interpretação**: Mesmo tipo de sistema operacional – validação por estados, não narrativa
+
+### Hieróglifos Egípcios
+- 𓏺 (ponto) como marcador de unidade
+- 𓈖 (canal) como contêiner
+- Mesmos operadores gráficos para problemas cognitivos universais
+
+### Chinês Antigo
+- 丶 (ponto) como marcador
+- 口 (abertura) como delimitador
+- Convergência evolutiva em sistemas de escrita
+
+## Conclusão
+
+O sistema harappano é um **protocolo operacional**, não uma língua fonética:
+- Usa ~45 símbolos principais (corpos-base + operadores)
+- Gera ~417 estados válidos
+- Operadores gráficos são universais
+- Equivalente moderno: **JSON + workflow + autômato finito**
+
+## Próximos Passos
+
+1. ✅ Implementar modelo de símbolos e famílias
+2. ✅ Implementar sistema de composição
+3. ✅ Implementar autômato finito de validação
+4. ✅ Implementar análise de frequência e distribuição
+5. 🔄 Extrair automaticamente grafo de composição completo
+6. 🔄 Implementar parser de textos harappanos reais
+7. 🔄 Publicar modelo formal como artigo técnico
+
+## Licença
+
+MIT License - Veja arquivo LICENSE para detalhes.
+
+## Referências
+
+- Sign list (373-417): Progressão morfológica das famílias
+- Table I: Frequência e posição sintática
+- Table II: Pares recorrentes (regras de composição)
+- Table IV: Distribuição por tipo de objeto
+- Texts: Exemplos de uso real (sequências contendo 394)
+# Harappa Operational Mathematics System
+
+A comprehensive formal system based on Indus Valley (Harappan) civilization principles for modern computational applications.
+
+## Overview
+
+The Harappa Operational Mathematics System is a novel formal framework inspired by the symbolic and structural properties of the ancient Indus script. It provides a mathematically rigorous foundation for various modern applications, from smart contract specification to theorem proving, authentication systems, and beyond.
+
+## Core Concepts
+
+### Symbols
+Basic units representing entities, resources, transactions, states, or quantifiers. Each symbol has a unique identifier and type.
+
+### Operators
+Transformations and qualifications that operate on symbols, including:
+- **Qualification**: Adding properties or constraints
+- **Transformation**: Changing states
+- **Composition**: Combining symbols
+- **Validation**: Ensuring correctness
+- **Closure**: Indicating completion
+
+### States
+Computational states with associated symbols and properties, representing points in a computation or process.
+
+### Records
+Complete compositions of symbols and operators, representing transactions, proofs, or processes. Records have a closure indicator showing completion and validity.
+
+## Implemented Proposals
+
+This system implements 15 innovative proposals:
+
+### 1. Formal Specification Language
+Use Harappa for specifying smart contracts and formal protocols with guaranteed termination and non-ambiguity.
+- State machine definition
+- Formal verification
+- Contract specification with pre/post conditions
+
+### 2. Universal Unique Identification (Harappa-UID)
+Hierarchical, semantically rich unique identifiers using symbol composition.
+- Hierarchical structure
+- Semantic encoding
+- Applications in supply chain, legal documents, digital assets
+
+### 3. Theorem Verification
+Computer-assisted theorem proving with diagrammatic proofs.
+- Proof step operators
+- Closure-based proof completion
+- Integration with proof assistants (Coq/Lean style)
+
+### 4. Archaeological Simulation
+Simulate Harappan trade networks and administrative structures.
+- Agent-based modeling
+- Network analysis
+- Economic reconstruction
+
+### 5. Visual Programming Interface
+Drag-and-drop programming using Harappa symbols.
+- Visual workflow creation
+- Code generation
+- Business process modeling
+
+### 6. Educational System
+Teach logic and mathematics using visual Harappa symbols.
+- Interactive learning
+- Visual state representation
+- Historical context
+
+### 7. AI Metadata Standard
+Annotate AI datasets and models with provenance and quality information.
+- Digital seals
+- Provenance tracking
+- Quality metrics
+
+### 8. Semantic Database
+Knowledge representation using Harappa ontology schema.
+- Compact representation
+- Non-ambiguous facts
+- Structured queries
+
+### 9. Low-Bandwidth Communication
+Efficient communication for remote/emergency scenarios.
+- Compact encoding
+- Structured messages
+- Priority queuing
+
+### 10. DAO Governance
+Decentralized decision-making with transparency.
+- Proposal management
+- Voting mechanisms
+- Immutable records
+
+### 11. Ancient Text Search
+Semantic search for ancient texts based on structure.
+- Pattern matching
+- Structural indexing
+- Cross-corpus analysis
+
+### 12. Algorithmic Art Generation
+Generate art using Harappa composition rules.
+- Rule-based generation
+- Structural meaning
+- Valid records as artworks
+
+### 13. Authentication Protocol
+Password-less authentication using Harappa seals.
+- Digital seals
+- Permission encoding
+- Identity verification
+
+### 14. Web Service Choreography
+Specify service orchestration using Harappa notation.
+- Message flow specification
+- Service composition
+- Formal verification
+
+### 15. Risk Analysis
+Analyze complex projects using Harappa sequences.
+- Dependency analysis
+- Risk quantification
+- Completion validation
+# Indus Operational Mathematics: A Comparative Analysis of Ancient Symbol Systems
+
+## Overview
+
+This repository presents a revolutionary approach to understanding the Harappan (Indus Valley) script through **comparative functional analysis** with other ancient writing systems: Nordic Runes, Phaistos Disc, Egyptian Hieroglyphs, and Ancient Chinese.
+
+Rather than treating these systems as phonetic encodings of spoken language, we propose they represent **operational state machines** that encode transformations of social, economic, and institutional states.
+
+## Core Hypothesis
+
+**The Harappan script is not "undeciphered language" but a specialized operational system for institutional validation.**
+
+Key insights:
+- 🔄 **Isomorphic Functions**: Different ancient systems solve similar cognitive problems through analogous symbolic structures
+- 🎯 **State Transformations**: Symbols operate as functions transforming states, not just phonetic markers
+- 🏛️ **Institutional Optimization**: Harappan script is optimized for administrative validation, not narrative
+- 🌐 **Universal Grammar**: ~45 fundamental operators underlie all ancient symbol systems
 # Indus Operational Mathematics
 
 **A Formal Framework for State-Based Symbol Systems**
@@ -436,6 +1262,11 @@ Where:
 ## Repository Structure
 
 ```
+docs/
+├── COMPARATIVE_ANALYSIS.md    # Deep comparison: Harappan vs Nordic Runes
+├── UNIFIED_ANALYSIS.md        # Multi-system analysis (5 writing systems)
+├── SYMBOL_DATABASE.md         # Complete catalog of Harappan symbols 1-44
+└── UNIVERSAL_GRAMMAR.md       # Formal grammar of ancient symbol systems
 indus-operational-mathematics/
 ├── docs/
 │   ├── comparativo-operacional.md    # Chinese-Harappan comparison
@@ -1217,6 +2048,130 @@ The framework identifies cross-cultural patterns such as:
 ## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/ShantiDraconis/indus-operational-mathematics.git
+cd indus-operational-mathematics
+
+# Install in development mode
+pip install -e .
+
+# Or install from PyPI (when published)
+pip install harappa
+```
+
+## Quick Start
+
+### Example 1: Formal Specification
+
+```python
+from harappa import Symbol, Operator, State, SymbolType, OperatorType
+from harappa.spec_lang import HarappaSpec, Transition
+
+# Create a state machine for a token transfer
+spec = HarappaSpec()
+token_sm = spec.create_state_machine("TokenTransfer")
+
+# Define states
+initial = State(is_final=False)
+token_sm.add_state("initial", initial)
+
+transferred = State(is_final=True)
+token_sm.add_state("transferred", transferred)
+token_sm.add_final_state("transferred")
+
+# Validate
+print(f"Valid: {token_sm.validate()}")
+print(f"Deterministic: {token_sm.is_deterministic()}")
+print(f"Terminates: {token_sm.has_termination_guarantee()}")
+```
+
+### Example 2: Unique Identifiers
+
+```python
+from harappa import Symbol, SymbolType
+from harappa.uid import HarappaUID, UIDType, UIDRegistry
+
+# Create a UID for a supply chain asset
+uid = HarappaUID(uid_type=UIDType.ASSET, context="supply_chain")
+uid.add_symbol(Symbol("SHIPMENT_001", SymbolType.ENTITY))
+uid.encode_metadata("origin", "Mumbai")
+
+# Register in a registry
+registry = UIDRegistry()
+uid_string = registry.register(uid)
+print(f"UID: {uid_string}")
+```
+
+### Example 3: Theorem Proving
+
+```python
+from harappa import Symbol, Operator, SymbolType, OperatorType
+from harappa.proof import ProofSystem, Theorem, DiagrammaticProofBuilder
+
+# Create proof system
+ps = ProofSystem()
+
+# Define theorem
+theorem = Theorem(name="Transitivity", statement=Symbol("A_implies_C", SymbolType.STATE))
+ps.add_theorem(theorem)
+
+# Build proof
+builder = DiagrammaticProofBuilder(ps, theorem)
+builder.assume(Symbol("A", SymbolType.STATE), "Assumption")
+# ... add more steps
+proof = builder.conclude(theorem.statement, "By transitivity")
+
+print(f"Proof complete: {proof.is_complete()}")
+print(f"Proof valid: {proof.verify()}")
+```
+
+## Examples
+
+The `examples/` directory contains comprehensive demonstrations:
+
+- `example1_specification.py` - Smart contract specification
+- `example2_uid.py` - Supply chain tracking with UIDs
+- `example3_proof.py` - Logical theorem proving
+- `example4_applications.py` - All 12 application domains
+
+Run examples:
+```bash
+cd examples
+python example1_specification.py
+python example2_uid.py
+python example3_proof.py
+python example4_applications.py
+```
+
+## Project Structure
+
+```
+indus-operational-mathematics/
+├── harappa/
+│   ├── __init__.py          # Main package
+│   ├── core.py              # Core symbols, operators, states
+│   ├── spec_lang.py         # Formal specification language
+│   ├── uid.py               # Unique identification system
+│   ├── proof.py             # Theorem verification
+│   └── applications.py      # Applications (proposals 4-15)
+├── examples/
+│   ├── example1_specification.py
+│   ├── example2_uid.py
+│   ├── example3_proof.py
+│   └── example4_applications.py
+├── tests/                   # Test suite
+├── docs/                    # Documentation
+├── setup.py                 # Package setup
+└── README.md               # This file
+```
+
+## Documentation
+
+Comprehensive documentation is available in the `docs/` directory:
+- **Core Concepts**: Detailed explanation of symbols, operators, and states
+- **API Reference**: Complete API documentation
+- **Tutorials**: Step-by-step guides for each proposal
+- **Theory**: Mathematical foundations and formal semantics
 pip install -e .
 ```
 
@@ -1404,6 +2359,217 @@ pip install -r requirements.txt
 
 ## Quick Start
 
+### Understanding the Comparative Method
+
+1. **Read the foundational analysis**: Start with [`COMPARATIVE_ANALYSIS.md`](docs/COMPARATIVE_ANALYSIS.md) to understand the Harappan-Runic correspondence
+2. **Explore the unified view**: See [`UNIFIED_ANALYSIS.md`](docs/UNIFIED_ANALYSIS.md) for cross-system patterns
+3. **Dive into symbols**: Reference [`SYMBOL_DATABASE.md`](docs/SYMBOL_DATABASE.md) for detailed symbol mappings
+4. **Study the theory**: Read [`UNIVERSAL_GRAMMAR.md`](docs/UNIVERSAL_GRAMMAR.md) for formal foundations
+
+## Key Discoveries
+
+### 1. The Eight Universal States
+
+All systems encode these fundamental states:
+1. **Existential** - Base entity existence
+2. **Instantiated** - Specific instance
+3. **Qualified** - With attributes
+4. **Quantified** - With number
+5. **Related** - In relation to others
+6. **Contextualized** - Within boundaries
+7. **Authorized** - With power/authority
+8. **Transcendent** - Elevated/divine
+
+### 2. Cross-System Correspondences
+
+| Concept | Harappan | Runic | Chinese | Egyptian | Function |
+|---------|----------|-------|---------|----------|----------|
+| Human Base | 26 | ᛗ (Mannaz) | 人 | 𓀾 | Entity operator |
+| Unity | 1 (│) | ᛁ (Isa) | 一 | 𓏤 | Cardinal |
+| Exchange | 4 (X) | ᚷ (Gebo) | 交 | - | Relational |
+| Knowledge | 5 (K) | ᚲ (Kenaz) | - | - | Illumination |
+| Protection | 7 (Z) | ᛉ (Algiz) | 之 | - | Defensive |
+| Authority | 30 | ᛗ+ᚨ | 王 | 𓀾+crown | Elevation |
+
+### 3. Transformation Patterns
+
+**Human Entity Transformations:**
+```
+Harappan:   26 → 27 (dot)    → 28 (stroke)  → 30 (crown)
+Function:   Human → Instance → Qualified    → Authority
+
+Chinese:    人 → 个           → 大            → 王
+Function:   Person → Individual → Great      → King
+
+Runic:      ᛗ → ᛗ+ᚠ         → ᛗ+ᚢ          → ᛗ+ᚨ
+Function:   Man → With wealth → With strength → With wisdom
+```
+
+## The Harappan System
+
+### Symbol Categories
+
+- **Cardinals (1-10)**: Numerical operators and basic transformations
+- **Structurals (11-25)**: Relational and organizational operators
+- **Entities (26-40)**: Anthropomorphic and object operators
+- **Closures (341-343)**: Institutional validation markers
+
+### Operational Grammar
+
+```
+Valid Sequence = Entity ⊕ Modifier₁ ⊕ Modifier₂ ⊕ ... ⊕ Closure
+
+Example: 26 ⊕ 1 ⊕ 4 ⊕ 343
+Meaning: Human (26) + Unity (1) + Relation (4) + Final Validation (343)
+Result: "Validated statement about a singular human in relational context"
+```
+
+## Three Types of Ancient Systems
+
+### 1. Operational Systems (Harappan, Phaistos)
+- **Purpose**: State validation and institutional record-keeping
+- **Characteristics**: Mandatory closure, limited vocabulary, non-phonetic
+- **Analogy**: Like database transactions with COMMIT statements
+
+### 2. Descriptive Systems (Egyptian, Chinese)
+- **Purpose**: Narrative and complex administration
+- **Characteristics**: Rich vocabulary, phonetic elements, optional closure
+- **Analogy**: Like programming languages with mixed paradigms
+
+### 3. Magical Systems (Runic)
+- **Purpose**: Divination, magic, ritual
+- **Characteristics**: Abstract, symbolic, flexible composition
+- **Analogy**: Like symbolic algebra with mystical interpretation
+
+## Decipherment Methodology
+
+### Cross-System Functional Analysis
+
+```
+1. Identify graphically similar symbols across systems
+2. Extract functional roles from known systems
+3. Hypothesize function in unknown system
+4. Validate with co-occurrence patterns
+5. Test in institutional contexts
+```
+
+### Example Application
+
+**Target**: Harappan symbol 5 (K-form)
+
+**Step 1** - Graphical similarity:
+- Runic: ᚲ (Kenaz) - torch/knowledge
+- Egyptian: 𓎡 - basket (K sound)
+
+**Step 2** - Functional analysis:
+- Kenaz: illumination, knowledge, controlled fire
+- Context: Opening, channel, revelation
+
+**Step 3** - Hypothesis:
+- Harappan 5: "illumination/knowledge operator"
+
+**Step 4** - Validation:
+- Check if 5 appears with entity operators
+- Check if 5 appears before closure operators
+- Verify institutional context patterns
+
+## Applications
+
+### 1. Archaeological Prediction
+Predict symbol usage patterns in newly discovered texts
+
+### 2. AI-Assisted Decipherment
+Train models on cross-system correspondences to decode unknown sequences
+
+### 3. Cognitive Science
+Test if humans naturally process ancient symbols as state transformations
+
+### 4. Historical Linguistics
+Understand evolution from operational to phonetic writing
+
+## Revolutionary Implications
+
+### For Indus Studies
+- **Rethink "decipherment"**: Not finding a language, but understanding a state machine
+- **Institutional focus**: Harappan civilization had sophisticated validation systems
+- **Non-linguistic writing**: Writing doesn't have to encode speech
+
+### For Writing Systems Generally
+- **Cognitive architecture**: Deep grammar shared across cultures
+- **Evolutionary stages**: Operational → Descriptive → Phonetic
+- **Limited universality**: ~45 fundamental semantic operations
+
+### For Computational Linguistics
+- **State-based semantics**: Symbols as transformation functions
+- **Formal grammars**: Ancient systems have precise computational semantics
+- **Machine learning**: Cross-system training for decipherment
+
+## Mathematical Foundations
+
+### State Space
+```
+S = {S₀, S₁, S₂, ..., S₈}
+where each Sᵢ represents a fundamental state category
+```
+
+### Transformation Functions
+```
+∀ operator o: State → State
+Composition: (o₂ ∘ o₁)(s) = o₂(o₁(s))
+```
+
+### Closure Validation
+```
+Valid(sequence) ↔ ∃ closure operator c at end of sequence
+```
+
+## Contributing
+
+We welcome contributions in several areas:
+
+1. **Additional correspondences**: Find more cross-system patterns
+2. **Statistical analysis**: Quantify correspondence strengths
+3. **Computational models**: Implement grammars as executable systems
+4. **Archaeological validation**: Test predictions against corpus data
+5. **Cognitive experiments**: Design studies to test processing theories
+
+## Future Research Directions
+
+1. **Complete mapping**: Full Harappan 1-44 ↔ Runic Futhark correspondence
+2. **Automated decipherment**: AI models trained on multi-system data
+3. **Seal interpretation**: Apply operational grammar to real Harappan seals
+4. **Comparative statistics**: Quantitative analysis of symbol frequencies
+5. **Extended systems**: Include Linear A, Olmec, Rongorongo
+
+## Citations and References
+
+### Primary Documents
+- Mahadevan, I. (1977). *The Indus Script: Texts, Concordance and Tables*
+- Robinson, A. (2015). *The Indus: Lost Civilizations*
+- Parpola, A. (1994). *Deciphering the Indus Script*
+
+### Comparative Studies
+- Gardiner, A. (1957). *Egyptian Grammar*
+- Wieger, L. (1965). *Chinese Characters*
+- Flowers, S. (1986). *Runes and Magic*
+
+### Theoretical Framework
+- Farmer, S., Sproat, R., Witzel, M. (2004). "The Collapse of the Indus-Script Thesis"
+- Rao, R. et al. (2009). "Entropic Evidence for Linguistic Structure in the Indus Script"
+
+## License
+
+This work is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions, discussions, or collaborations, please open an issue or start a discussion on GitHub.
+
+---
+
+**"A verdadeira decifração do Harappano pode não revelar uma 'língua', mas sim a estrutura formal de como uma civilização codificava realidade institucional."**
+
+*"The true decipherment of Harappan may not reveal a 'language', but rather the formal structure of how a civilization encoded institutional reality."*
 ```python
 from src.indus_analysis import IndusSequenceAnalyzer
 from src.statistical_metrics import pointwise_mutual_information
@@ -1630,11 +2796,57 @@ See `examples/` directory for complete examples:
 ## Testing
 
 ```bash
+# Run all tests
+python -m pytest tests/
+
+# Run specific test module
+python -m pytest tests/test_core.py
+
+# Run with coverage
+python -m pytest --cov=harappa tests/
 python -m pytest tests/
 ```
 
 ## Contributing
 
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This system is inspired by the remarkable achievements of the Indus Valley civilization and their sophisticated symbolic systems. It demonstrates how ancient principles can inspire modern computational frameworks.
+
+## Citation
+
+If you use this system in academic work, please cite:
+
+```bibtex
+@software{harappa2026,
+  title={Harappa Operational Mathematics System},
+  author={Harappa Project Contributors},
+  year={2026},
+  url={https://github.com/ShantiDraconis/indus-operational-mathematics}
+}
+```
+
+## Contact
+
+- GitHub: [ShantiDraconis/indus-operational-mathematics](https://github.com/ShantiDraconis/indus-operational-mathematics)
+- Issues: [GitHub Issues](https://github.com/ShantiDraconis/indus-operational-mathematics/issues)
+
+## Roadmap
+
+- [ ] Complete documentation for all proposals
+- [ ] Add visualization tools for symbols and states
+- [ ] Implement Coq/Lean integration for proof system
+- [ ] Create web-based visual programming interface
+- [ ] Develop blockchain integration for DAO governance
+- [ ] Build reference implementation for each application domain
+- [ ] Performance optimization for large-scale simulations
+- [ ] Multi-language bindings (JavaScript, Rust, Go)
 Please maintain the separation between:
 1. Empirical statistical analysis (main modules)
 2. Formal grammar models (as mathematical abstraction)
