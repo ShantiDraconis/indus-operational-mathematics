@@ -53,6 +53,8 @@ wheels/
 .installed.cfg
 *.egg
 
+### Generated outputs ###
+symbol_network.json
 # PyTest
 .pytest_cache/
 
