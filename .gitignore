@@ -1,3 +1,30 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.xdv
+
+# LaTeX output
+*.pdf
+*.dvi
+*.ps
+
 # Python
 __pycache__/
 *.py[cod]
@@ -10,6 +37,7 @@ dist/
 downloads/
 eggs/
 .eggs/
+lib/
 lib64/
 parts/
 sdist/
@@ -21,6 +49,16 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 .pytest_cache/
 .coverage
 htmlcov/
@@ -142,6 +180,10 @@ acs-*.bib
 *.swp
 *.swo
 *~
+
+# OS
+.DS_Store
+Thumbs.db
 .DS_Store
 
 # Proof assistants intermediate files
@@ -165,6 +207,7 @@ tmp/
 temp/
 *.tmp
 
+# AL (Business Central) - preserved from original
 # OS specific
 Thumbs.db
 .Spotlight-V100
@@ -176,20 +219,14 @@ package-lock.json
 yarn.lock
 #Cache folder
 .alcache/
-#Symbols folder
 .alpackages/
-#Snapshots folder
 .snapshots/
-#Testing Output folder
 .output/
-#Extension App-file
 *.app
-#Rapid Application Development File
 rad.json
-#Translation Base-file
 *.g.xlf
-#License-file
 *.flf
+TestResults.xml
 #Test results file
 TestResults.xml
 

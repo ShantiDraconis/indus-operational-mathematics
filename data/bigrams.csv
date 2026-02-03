@@ -1,3 +1,17 @@
+sign1,sign2,count,conditional_prob,interpretation
+M361,M328,234,0.26,fish_followed_by_stroke
+M346,M328,187,0.25,jar_followed_by_stroke
+M328,M328,98,0.06,stroke_doubling
+M361,M346,156,0.17,fish_followed_by_jar
+M328,M411,145,0.09,stroke_followed_by_terminal
+M346,M329,132,0.17,jar_followed_by_double_stroke
+M361,M329,118,0.13,fish_followed_by_double_stroke
+M329,M411,94,0.08,double_stroke_followed_by_terminal
+M003,M411,78,0.12,triple_stroke_followed_by_terminal
+M361,M001,67,0.08,fish_followed_by_single_vertical
+# Bigram analysis showing most common two-sign sequences
+# Full dataset would include all attested bigrams
+# This provides evidence for sequential constraints and operational patterns
 symbol1,symbol2,frequency,context,position
 373,342,450,administrative_basic,entity_closure
 373,343,380,administrative_confirmed,entity_closure

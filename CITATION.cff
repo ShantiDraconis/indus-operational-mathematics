@@ -3,6 +3,32 @@ message: "If you use this work, please cite it as below."
 authors:
   - family-names: "Draconis"
     given-names: "Shanti"
+title: "Operational Mathematics in the Indus Script: Finite Arithmetic, State Logic, and Institutional Validation"
+version: 1.0.0
+date-released: 2026-02-03
+url: "https://github.com/ShantiDraconis/indus-operational-mathematics"
+repository-code: "https://github.com/ShantiDraconis/indus-operational-mathematics"
+license: 
+  - "CC-BY-4.0"
+  - "MIT"
+  - "CC0-1.0"
+keywords:
+  - "Indus script"
+  - "Harappan civilization"
+  - "operational mathematics"
+  - "finite automata"
+  - "relational logic"
+  - "ancient writing systems"
+  - "computational archaeology"
+abstract: >-
+  This monograph presents a formal reconstruction of the Indus (Harappan) 
+  script as an operational symbolic system implementing finite mathematics, 
+  relational logic, and state-based validation. This work does NOT propose 
+  a phonetic decipherment, but rather analyzes the script as a formal system 
+  of operational notation used for administrative and institutional validation.
+  The reconstruction includes finite arithmetic, cardinal operations, relational 
+  logic, state transitions, and institutional validation mechanisms, with formal 
+  equivalents expressed in modern computational terms.
 title: "Indus Operational Mathematics: A Formal Framework for State-Based Symbol Systems"
 version: 1.0.0
 doi: 10.5281/zenodo.XXXXXXX  # To be updated upon Zenodo publication

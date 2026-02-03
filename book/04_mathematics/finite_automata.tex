@@ -1,0 +1,78 @@
+% Finite Automata Model
+\section{Finite Automata Representation}
+
+\subsection{DFA Construction}
+
+The Indus script can be modeled as a Deterministic Finite Automaton:
+\[
+M = (Q, \Sigma, \delta, q_0, F)
+\]
+
+where:
+\begin{itemize}
+    \item $Q$: Set of states (operational contexts)
+    \item $\Sigma$: Alphabet (sign inventory)
+    \item $\delta: Q \times \Sigma \rightarrow Q$: Transition function
+    \item $q_0$: Initial state (blank/uninscribed)
+    \item $F \subseteq Q$: Accepting states (valid completions)
+\end{itemize}
+
+\subsection{State Space}
+
+\subsubsection{Primary States}
+\begin{itemize}
+    \item $q_0$: Initial (no signs)
+    \item $q_{\text{inst}}$: Entity instantiated
+    \item $q_{\text{count}}$: Quantity specified
+    \item $q_{\text{rel}}$: Relation established
+    \item $q_{\text{qual}}$: Qualification added
+    \item $q_{\text{close}}$: Sequence closed (accepting state)
+\end{itemize}
+
+\subsection{Transition Function}
+
+Example transitions:
+\begin{align*}
+    \delta(q_0, \text{INST}) &= q_{\text{inst}} \\
+    \delta(q_{\text{inst}}, \text{COUNT}) &= q_{\text{count}} \\
+    \delta(q_{\text{count}}, \text{CLOSE}) &= q_{\text{close}} \\
+    \delta(q_{\text{inst}}, \text{CLOSE}) &= q_{\text{close}}
+\end{align*}
+
+\subsection{Accepting Conditions}
+
+Valid inscriptions are those reaching accepting states:
+\begin{itemize}
+    \item Simple completion: Entity alone
+    \item Counted completion: Entity + count
+    \item Validated completion: Any sequence + closure
+    \item Complex completion: Full operational chain + closure
+\end{itemize}
+
+\subsection{Computational Power}
+
+\subsubsection{Recognizable Languages}
+The DFA recognizes regular languages of the form:
+\[
+L = \{\text{valid Indus inscriptions}\}
+\]
+
+\subsubsection{Limitations}
+\begin{itemize}
+    \item Cannot recognize context-free languages
+    \item No stack or memory beyond current state
+    \item No recursive structures
+    \item Finite state space
+\end{itemize}
+
+This places Indus inscriptions at the lowest level of the Chomsky hierarchy.
+
+\subsection{Empirical Validation}
+
+Corpus analysis confirms:
+\begin{itemize}
+    \item All attested inscriptions are DFA-recognizable
+    \item State transitions match observed sign order constraints
+    \item Forbidden sequences correspond to undefined transitions
+    \item Distribution patterns align with state probabilities
+\end{itemize}

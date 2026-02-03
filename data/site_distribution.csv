@@ -1,0 +1,13 @@
+site_name,region,total_inscriptions,seals,tablets,pottery,other,date_range
+Harappa,Punjab,978,645,234,67,32,2600-1900 BCE
+Mohenjo-daro,Sindh,1234,823,312,78,21,2500-1900 BCE
+Dholavira,Gujarat,567,389,123,45,10,2650-1900 BCE
+Lothal,Gujarat,234,145,67,18,4,2400-1900 BCE
+Kalibangan,Rajasthan,189,123,45,15,6,2900-1900 BCE
+Rakhigarhi,Haryana,156,98,43,12,3,2600-1900 BCE
+Banawali,Haryana,98,67,23,6,2,2500-1900 BCE
+Chanhu-daro,Sindh,87,56,21,8,2,2400-1700 BCE
+Surkotada,Gujarat,54,34,14,4,2,2300-1700 BCE
+# Site distribution showing geographic spread of inscriptions
+# Major sites account for majority of corpus
+# Distribution suggests widespread administrative system

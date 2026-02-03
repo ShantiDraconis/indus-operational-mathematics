@@ -1,5 +1,199 @@
 \documentclass[12pt,a4paper]{book}
 
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+
+% Geometry
+\geometry{margin=1in}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Code listing style
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
+
+% Headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=green,
+    pdftitle={Operational Mathematics in the Indus Script},
+    pdfauthor={Shanti Draconis}
+}
+
+% Document metadata
+\title{Operational Mathematics in the Indus Script:\\
+Finite Arithmetic, State Logic, and Institutional Validation}
+\author{Shanti Draconis}
+\date{\today}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\input{00_frontmatter/title.tex}
+
+\tableofcontents
+\cleardoublepage
+
+\input{00_frontmatter/abstract.tex}
+\cleardoublepage
+
+\input{00_frontmatter/notation.tex}
+\cleardoublepage
+
+% Main matter
+\mainmatter
+
+% Chapter 1: Introduction
+\chapter{Introduction}
+\input{01_introduction/scope.tex}
+\input{01_introduction/methodology.tex}
+\input{01_introduction/limits.tex}
+
+% Chapter 2: Sign System
+\chapter{The Sign System}
+\input{02_sign_system/sign_inventory.tex}
+\input{02_sign_system/families_328_372.tex}
+\input{02_sign_system/families_373_417.tex}
+\input{02_sign_system/variants.tex}
+
+% Chapter 3: Operational Classification
+\chapter{Operational Classification}
+\input{03_operators/instantiation.tex}
+\input{03_operators/counting.tex}
+\input{03_operators/relation.tex}
+\input{03_operators/qualification.tex}
+\input{03_operators/closure.tex}
+
+% Chapter 4: Mathematical Framework
+\chapter{Mathematical Framework}
+\input{04_mathematics/cardinal_arithmetic.tex}
+\input{04_mathematics/relations_logic.tex}
+\input{04_mathematics/finite_automata.tex}
+\input{04_mathematics/state_time.tex}
+\input{04_mathematics/limits_of_math.tex}
+
+% Chapter 5: Comparative Systems
+\chapter{Comparative Symbolic Systems}
+\input{05_comparative_systems/egyptian_hieroglyphs.tex}
+\input{05_comparative_systems/old_chinese.tex}
+\input{05_comparative_systems/phaistos_disk.tex}
+\input{05_comparative_systems/runic_systems.tex}
+
+% Chapter 6: Modern Equivalents
+\chapter{Modern Operational Equivalents}
+\input{06_modern_equivalents/workflows.tex}
+\input{06_modern_equivalents/ledgers.tex}
+\input{06_modern_equivalents/automata.tex}
+\input{06_modern_equivalents/json_equivalence.tex}
+
+% Chapter 7: Formal Model
+\chapter{Formal Model and Proofs}
+\input{07_formal_model/axioms.tex}
+\input{07_formal_model/grammar.tex}
+\input{07_formal_model/transition_graphs.tex}
+\input{07_formal_model/proofs_of_scope.tex}
+
+% Chapter 8: Conclusion
+\chapter{Conclusion}
+\input{08_conclusion/synthesis.tex}
+\input{08_conclusion/implications.tex}
+
+% Back matter
+\backmatter
+
+% Bibliography (placeholder - to be filled with actual references)
+\begin{thebibliography}{99}
+
+\bibitem{mahadevan1977}
+Mahadevan, I. (1977).
+\textit{The Indus Script: Texts, Concordance and Tables}.
+Archaeological Survey of India, New Delhi.
+
+\bibitem{wells1999}
+Wells, B. K. (1999).
+\textit{Epigraphic Approaches to Indus Writing}.
+Oxbow Books, Oxford.
+
+\bibitem{farmer2004}
+Farmer, S., Sproat, R., \& Witzel, M. (2004).
+The Collapse of the Indus-Script Thesis: The Myth of a Literate Harappan Civilization.
+\textit{Electronic Journal of Vedic Studies}, 11(2), 19--57.
+
+\bibitem{rao2009}
+Rao, R. P. N., Yadav, N., Vahia, M. N., Joglekar, H., Adhikari, R., \& Mahadevan, I. (2009).
+Entropic Evidence for Linguistic Structure in the Indus Script.
+\textit{Science}, 324(5931), 1165.
+
+\bibitem{parpola1994}
+Parpola, A. (1994).
+\textit{Deciphering the Indus Script}.
+Cambridge University Press.
+
+\bibitem{possehl2002}
+Possehl, G. L. (2002).
+\textit{The Indus Civilization: A Contemporary Perspective}.
+AltaMira Press.
+
+\bibitem{kenoyer1998}
+Kenoyer, J. M. (1998).
+\textit{Ancient Cities of the Indus Valley Civilization}.
+Oxford University Press.
+
+\bibitem{hopcroft2006}
+Hopcroft, J. E., Motwani, R., \& Ullman, J. D. (2006).
+\textit{Introduction to Automata Theory, Languages, and Computation} (3rd ed.).
+Pearson Education.
+
+\bibitem{sipser2012}
+Sipser, M. (2012).
+\textit{Introduction to the Theory of Computation} (3rd ed.).
+Cengage Learning.
+
+\bibitem{chomsky1956}
+Chomsky, N. (1956).
+Three Models for the Description of Language.
+\textit{IRE Transactions on Information Theory}, 2(3), 113--124.
+
+\end{thebibliography}
 % Load preamble with all packages and custom commands
 \input{preamble}
 

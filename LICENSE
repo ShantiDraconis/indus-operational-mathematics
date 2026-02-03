@@ -1,4 +1,24 @@
-MIT License
+# Licensing Information
+
+This repository contains multiple types of content with different licenses:
+
+## Text and Documentation (CC BY 4.0)
+
+The monograph text, documentation, and written content in the `book/`, `appendix/`, 
+and documentation files are licensed under the Creative Commons Attribution 4.0 
+International License (CC BY 4.0).
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution:
+"Operational Mathematics in the Indus Script" by Draconis, 
+licensed under CC BY 4.0
+
+## Code (MIT License)
+
+The computational models and code in the `code/` directory are licensed under 
+the MIT License:
 
 Copyright (c) 2026 Draconis
 
@@ -19,3 +39,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Data (CC0 1.0 Universal)
+
+The datasets in the `data/` directory are dedicated to the public domain under 
+the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+
+To view a copy of this dedication, visit:
+https://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, the author has waived all copyright and 
+related or neighboring rights to the datasets.

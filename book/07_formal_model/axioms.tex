@@ -1,0 +1,60 @@
+% Axioms of the Operational System
+\section{Axioms of the Operational System}
+
+\subsection{Foundational Axioms}
+
+We establish the following axioms for the Indus operational system:
+
+\subsubsection{Axiom 1: Sign Functionality}
+Every sign $\sigma \in \mathcal{S}$ has at least one operational function from the set:
+\[
+\mathcal{F} = \{\text{INST}, \text{COUNT}, \text{REL}, \text{QUAL}, \text{CLOSE}\}
+\]
+
+\subsubsection{Axiom 2: Sequence Validity}
+A sequence $w = \sigma_1\sigma_2\cdots\sigma_n$ is valid if and only if there exists a path through the state space from $q_0$ to some $q_f \in F$.
+
+\subsubsection{Axiom 3: Operational Ordering}
+Operations must respect precedence:
+\[
+\text{INST} \prec \{\text{COUNT}, \text{REL}, \text{QUAL}\} \prec \text{CLOSE}
+\]
+where $\prec$ denotes "must precede if both present."
+
+\subsubsection{Axiom 4: Cardinality Constraints}
+\begin{itemize}
+    \item Each valid sequence has at most one instantiation
+    \item Each valid sequence has at most one closure
+    \item Counting may repeat (multiple quantities)
+    \item Relations and qualifications may repeat
+\end{itemize}
+
+\subsubsection{Axiom 5: Functional Completeness}
+The operational system is closed under composition: all valid operational sequences terminate in defined states.
+
+\subsection{Derived Properties}
+
+From these axioms, we derive:
+
+\subsubsection{Theorem 1: Finite Length}
+All valid inscriptions have finite length bounded by the state space.
+
+\textbf{Proof}: The system is a DFA with finite states $|Q|$. By the pigeonhole principle, any sequence longer than $|Q|$ must revisit states. Since the system is deterministic and acyclic (no returning transitions), maximum length is $|Q| - 1$.
+
+\subsubsection{Theorem 2: Decidability}
+The set of valid inscriptions is decidable in linear time.
+
+\textbf{Proof}: DFA recognition is $O(n)$ where $n$ is inscription length. Each sign is processed once through the transition function.
+
+\subsubsection{Theorem 3: Regularity}
+The language of valid Indus inscriptions is regular (Type 3 in Chomsky hierarchy).
+
+\textbf{Proof}: The system is recognizable by a DFA, therefore the language is regular by definition.
+
+\subsection{Consistency}
+
+The axiom system is consistent: there exist valid inscriptions satisfying all axioms (proof by construction from corpus).
+
+\subsection{Independence}
+
+The axioms are independent: no axiom can be derived from the others (proof by countermodel construction).

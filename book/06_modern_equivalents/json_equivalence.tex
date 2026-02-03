@@ -1,0 +1,115 @@
+% JSON Equivalence
+\section{JSON/XML Schema and Data Validation}
+
+\subsection{Structured Data Formats}
+
+Modern data exchange relies on structured formats: JSON, XML, YAML.
+
+\subsubsection{JSON Example}
+\begin{verbatim}
+{
+  "entity": "jar",
+  "quantity": 3,
+  "qualification": "large",
+  "validation": "sealed"
+}
+\end{verbatim}
+
+\subsection{Schema Validation}
+
+JSON Schema defines valid structure:
+\begin{itemize}
+    \item Required fields
+    \item Field types (string, number, boolean)
+    \item Value constraints (min, max, enum)
+    \item Nesting rules
+    \item Reference resolution
+\end{itemize}
+
+\subsection{Indus as JSON Schema}
+
+\subsubsection{Hypothetical Mapping}
+An Indus inscription as JSON:
+\begin{verbatim}
+{
+  "type": "administrative_record",
+  "entity": {
+    "class": "container",
+    "variant": "jar_type_A"
+  },
+  "quantity": 5,
+  "qualifiers": ["origin_site_X"],
+  "validation": {
+    "status": "sealed",
+    "authority": "official_mark"
+  }
+}
+\end{verbatim}
+
+\subsection{Structural Correspondence}
+
+\begin{center}
+\begin{tabular}{ll}
+JSON/XML & Indus \\
+\hline
+Root element & Inscription context \\
+Required field & Mandatory sign \\
+Optional field & Optional sign \\
+Type constraint & Sign class restriction \\
+Enum value & Sign choice from set \\
+Nesting & Qualification/relation \\
+Validation schema & Operational rules \\
+\end{tabular}
+\end{center}
+
+\subsection{Validation Process}
+
+\subsubsection{JSON Validation}
+\begin{itemize}
+    \item Parse input data
+    \item Check against schema
+    \item Verify required fields
+    \item Validate types and constraints
+    \item Return valid/invalid
+\end{itemize}
+
+\subsubsection{Indus Validation}
+\begin{itemize}
+    \item Read inscription
+    \item Check against operational rules
+    \item Verify required signs
+    \item Validate sequence constraints
+    \item Verify closure/seal
+\end{itemize}
+
+\subsection{Expression Limits}
+
+Both systems have restricted expressiveness:
+\begin{itemize}
+    \item JSON Schema: Cannot express arbitrary logic
+    \item Indus: Cannot express arbitrary statements
+    \item Both: Optimized for validation, not computation
+    \item Both: Domain-specific languages
+\end{itemize}
+
+\subsection{Modern Relevance}
+
+The comparison highlights:
+\begin{itemize}
+    \item Data validation is a perennial requirement
+    \item Structured notation predates modern computing
+    \item Schema-based validation is ancient practice
+    \item Administrative records require formal structure
+\end{itemize}
+
+\subsection{Translation Experiment}
+
+A possible exercise: Translate known Indus patterns to JSON schema, demonstrating structural equivalence.
+
+This would provide:
+\begin{itemize}
+    \item Formal specification of Indus rules
+    \item Machine-readable validation
+    \item Cross-cultural comparison framework
+    \item Pedagogical tool
+\end{itemize}

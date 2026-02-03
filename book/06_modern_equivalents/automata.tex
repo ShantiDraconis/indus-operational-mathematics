@@ -1,0 +1,88 @@
+% Automata and State Machines
+\section{Finite Automata in Software Engineering}
+
+\subsection{State Machine Applications}
+
+Finite automata are fundamental in modern computing.
+
+\subsubsection{Common Uses}
+\begin{itemize}
+    \item Protocol specifications (TCP/IP, HTTP)
+    \item User interface logic (forms, wizards)
+    \item Lexical analysis (compilers, parsers)
+    \item Hardware design (digital circuits)
+    \item Game logic (NPC behavior, game states)
+\end{itemize}
+
+\subsection{Formal Specification}
+
+Modern state machines specify:
+\begin{itemize}
+    \item States (system configurations)
+    \item Transitions (allowed state changes)
+    \item Events (triggers for transitions)
+    \item Actions (operations performed)
+    \item Guards (conditions for transitions)
+\end{itemize}
+
+\subsection{Indus as State Machine}
+
+\subsubsection{Mapping}
+\begin{center}
+\begin{tabular}{ll}
+Software & Indus \\
+\hline
+State & Operational context \\
+Transition & Sign placement \\
+Event & Sign reading \\
+Action & Operational function \\
+Guard & Sign constraints \\
+\end{tabular}
+\end{center}
+
+\subsection{UML State Diagrams}
+
+Unified Modeling Language (UML) provides graphical state machine notation:
+\begin{itemize}
+    \item States: Rounded rectangles
+    \item Transitions: Arrows
+    \item Initial state: Solid circle
+    \item Final states: Double circles
+\end{itemize}
+
+An Indus inscription sequence can be directly represented as a UML state diagram.
+
+\subsection{Regular Expressions}
+
+State machines correspond to regular expressions:
+\begin{itemize}
+    \item Indus valid sequences: Regular language
+    \item Can be expressed as regex
+    \item Can be recognized by DFA
+    \item Decidable in linear time
+\end{itemize}
+
+\subsection{Code Example}
+
+Pseudocode for Indus inscription validation:
+\begin{verbatim}
+state = INITIAL
+for each sign in inscription:
+    if valid_transition(state, sign):
+        state = next_state(state, sign)
+    else:
+        return INVALID
+return state in ACCEPTING_STATES
+\end{verbatim}
+
+\subsection{Relevance}
+
+This comparison demonstrates:
+\begin{itemize}
+    \item Ancient operational notation maps to modern formal methods
+    \item State-based thinking is universal
+    \item Validation remains a core concern
+    \item Formal specification enables rigorous analysis
+\end{itemize}
+
+The Indus script is a Bronze Age implementation of finite automata theory.
