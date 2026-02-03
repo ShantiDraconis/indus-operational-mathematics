@@ -8,6 +8,7 @@ open import Data.Bool using (Bool; true; false; if_then_else_)
 open import Data.List using (List; []; _∷_; length)
 open import Data.Maybe using (Maybe; just; nothing)
 open import Data.Product using (_×_; _,_; ∃; Σ; proj₁; proj₂)
+open import Data.Sum using (_⊎_; inj₁; inj₂)
 open import Data.String using (String)
 open import Relation.Binary.PropositionalEquality using (_≡_; refl; sym; trans)
 open import Relation.Nullary using (¬_)
@@ -85,8 +86,6 @@ postulate
       OperationalSystem.class-of sys s1) ⊎
      (OperationalSystem.class-of sys s3 ≡ 
       OperationalSystem.class-of sys s2))
-  where
-    open import Data.Sum using (_⊎_; inj₁; inj₂)
 
 -- ============================================================================
 -- Axiom A3: Restricted Composition

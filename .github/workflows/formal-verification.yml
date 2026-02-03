@@ -27,6 +27,10 @@ jobs:
         with:
           use-elan: true
           
+      - name: Configure Lean 4 default toolchain
+        run: |
+          elan default leanprover/lean4:v4.3.0
+          
       - name: Build Lean project
         working-directory: formal/lean
         run: |
