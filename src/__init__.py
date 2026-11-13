@@ -1,8 +1,12 @@
 """
-Harappan Operational Mathematics
-A formal implementation of the Harappan axiomatic system.
+Indus Operational Mathematics
+A rigorous framework for analyzing Indus script patterns using statistical methods,
+with clear separation between physics, statistics, and philosophy.
 
-This package provides:
+A comparative analysis framework for studying symbolic systems
+across ancient and modern contexts.
+
+Harappan Operational Mathematics (harappan_core), reexported here:
 - Core symbol and inscription classes
 - Deterministic finite automaton for validation
 - Composition engine implementing the ⊕ operator
@@ -30,15 +34,5 @@ __all__ = [
     'SemanticInterpreter',
     'create_example_inscription'
 ]
-
-__version__ = '1.0.0'
-__author__ = 'Harappan Operational Mathematics Project'
-Indus Operational Mathematics
-A rigorous framework for analyzing Indus script patterns using statistical methods,
-with clear separation between physics, statistics, and philosophy.
-
-A comparative analysis framework for studying symbolic systems
-across ancient and modern contexts.
-"""
 
 __version__ = "0.1.0"
