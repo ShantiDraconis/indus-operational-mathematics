@@ -32,6 +32,8 @@ setup(
     install_requires=[
         "numpy>=1.20.0",
         "matplotlib>=3.3.0",
+        # analysis/zipf_analysis.py e analysis/compare_distributions.py usam scipy.stats
+        "scipy>=1.7.0",
     ],
     extras_require={
         "dev": [
@@ -42,6 +44,8 @@ setup(
             "mypy>=1.0",
         ],
         "visualization": [
+            # visualization/plot_zipf.py
+            "seaborn>=0.11.0",
             "networkx>=3.0",
             "graphviz>=0.20",
         ],
