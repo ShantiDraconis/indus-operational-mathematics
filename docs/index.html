@@ -1,161 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Indus Script as an Operational System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indus Operational Mathematics</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Indus Script as an Operational System</h1>
-            <h2>How one of the world's earliest civilizations encoded quantity, relation, and validation without language.</h2>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="key-statement">
-            <div class="highlight-box">
-                <p><strong>This project does not claim a phonetic decipherment of the Indus script.</strong></p>
-                <p>It presents a formal model showing how the script functions as a finite operational system for counting, relating, qualifying, and closing institutional states.</p>
-            </div>
-        </section>
-
-        <section id="problem">
-            <h2>What problem does this system solve?</h2>
-            <p>Harappan society needed a way to record quantities, ownership, relations, and validation without writing long texts. The solution was a compact symbolic system that works like a modern workflow or database record.</p>
-            
-            <div class="analogy-box">
-                <h3>Modern Analogies</h3>
-                <div class="analogies">
-                    <div class="analogy-item">📊 <strong>JSON</strong></div>
-                    <div class="analogy-item">⚙️ <strong>Workflow</strong></div>
-                    <div class="analogy-item">📋 <strong>Status Log</strong></div>
-                    <div class="analogy-item">📒 <strong>Ledger</strong></div>
-                </div>
-                <p class="analogy-explanation">Like these modern systems, the Indus script encodes <em>states, quantities, and validation</em> — not stories or speech.</p>
-            </div>
-        </section>
-
-        <section id="diagram">
-            <h2>The Core Process</h2>
-            <p class="diagram-explanation">The Indus script does not encode sentences. It encodes <strong>process states</strong>:</p>
-            
-            <div class="process-diagram">
-                <div class="process-step">
-                    <div class="step-box">ENTITY</div>
-                    <div class="arrow">→</div>
-                </div>
-                <div class="process-step">
-                    <div class="step-box">QUALIFIED</div>
-                    <div class="arrow">→</div>
-                </div>
-                <div class="process-step">
-                    <div class="step-box">COUNTED</div>
-                    <div class="arrow">→</div>
-                </div>
-                <div class="process-step">
-                    <div class="step-box">CLOSED</div>
-                </div>
-            </div>
-
-            <div class="diagram-notes">
-                <ul>
-                    <li>❌ Not a sentence</li>
-                    <li>✓ It's a process</li>
-                    <li>✓ It's a state</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="examples">
-            <h2>Conceptual Example</h2>
-            <p>Without revealing technical details, here's how the system works conceptually:</p>
-            
-            <div class="comparison">
-                <div class="example-box">
-                    <h4>Indus-style (conceptual)</h4>
-                    <code>[Object] + [3 units] + [validated]</code>
-                </div>
-                
-                <div class="example-box">
-                    <h4>Modern equivalent</h4>
-                    <pre>{
-  "item": "X",
-  "quantity": 3,
-  "status": "closed"
-}</pre>
-                </div>
-            </div>
-            
-            <p class="note">This is a functional analogy, not a literal translation.</p>
-        </section>
-
-        <section id="what-not" class="important">
-            <h2>What This Is NOT</h2>
-            <div class="not-list">
-                <div class="not-item">❌ Not a literal translation</div>
-                <div class="not-item">❌ Not spoken language</div>
-                <div class="not-item">❌ Not alphabetic writing</div>
-                <div class="not-item">❌ Not narrative text</div>
-                <div class="not-item">❌ Not a secret code</div>
-            </div>
-        </section>
-
-        <section id="methodology">
-            <h2>Methodology</h2>
-            <p>This work builds upon established scholarship while proposing a new interpretive framework:</p>
-            <ul>
-                <li><strong>Corpus:</strong> Analysis based on Mahadevan's concordance</li>
-                <li><strong>Approach:</strong> Formal operational modeling rather than linguistic decipherment</li>
-                <li><strong>Scope:</strong> Focuses on structural patterns, positional regularities, and quantitative closure</li>
-                <li><strong>References:</strong> Engages with work by Mahadevan, Parpola, Wells, and others</li>
-            </ul>
-            <p><strong>Limits:</strong> This model explains <em>how the system functions</em>, not what specific signs "mean" in a linguistic sense.</p>
-        </section>
-
-        <section id="access">
-            <h2>Full Technical Access</h2>
-            <p>For the complete formal model, mathematical scope, sign families, and empirical analysis, see the full monograph and datasets available via Zenodo.</p>
-            <div class="access-links">
-                <a href="#" class="button">📖 Full Monograph</a>
-                <a href="#" class="button">📊 Datasets (Zenodo)</a>
-                <a href="https://github.com/ShantiDraconis/indus-operational-mathematics" class="button">💻 Repository</a>
-            </div>
-            <p class="note"><em>Links to the complete technical documentation will be added upon publication.</em></p>
-        </section>
-
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h3>Is this a decipherment?</h3>
-                <p>No. This is a <strong>functional model</strong> of how the script operates as a system. It does not claim to translate specific inscriptions into readable language.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Can you read the inscriptions?</h3>
-                <p>The model identifies structural patterns and operational roles of sign positions. It does not provide phonetic readings or semantic translations.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>What makes this different from other approaches?</h3>
-                <p>Rather than trying to find language in the script, this work models it as an <strong>institutional recording system</strong> — similar to modern database records or workflow states.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Is this controversial?</h3>
-                <p>Any new approach to the Indus script faces scrutiny. This work is presented as a formal model with testable predictions, open to academic evaluation and critique.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Indus Operational Mathematics Project</p>
-            <p>The Indus script encodes states, quantities, and validation — not stories or speech.</p>
-        </div>
-    </footer>
+  <header class="container"><h1>Indus Operational Mathematics</h1></header>
+  <main class="container">
+    <p>This project explores how a finite-state model processes symbol sequences associated with the Indus script. The code shows how a chosen set of rules behaves on the supplied inputs. The historical meaning of the symbols remains an open question.</p>
+    <h2>Explore the project</h2>
+    <ul>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/blob/main/README.md">Project scope and current status</a></li>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/blob/main/data/example_sequences.md">Example sequences</a></li>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/tree/main/code/python">Python implementation</a></li>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/tree/main/cpp">C++ implementation</a></li>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/blob/main/book/main.tex">Book source</a></li>
+      <li><a href="https://github.com/ShantiDraconis/indus-operational-mathematics/blob/main/VALIDATION.txt">Validation report</a></li>
+    </ul>
+  </main>
 </body>
 </html>
